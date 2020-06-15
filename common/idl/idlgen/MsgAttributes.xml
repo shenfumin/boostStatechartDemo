@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<NewRTMessages>
+		<Version major="0" minor="0" patch="0" text="0.0"/>
+		<Group name="CMS">
+			<Message ack="0" action="Please check the user name entered" allow_ov="0" category="NA" description="The user given does not exist." mid="5000" midName="MSG_ID_CMS_NO_USER" name="No User" severity="Warn"/>
+			<Message ack="0" action="Please check the password entered and try again" allow_ov="0" category="NA" description="The password of user is wrong." mid="5001" midName="MSG_ID_CMS_WRONG_PASSWORD" name="Wrong Password" severity="Warn"/>
+			<Message ack="0" action="Plaese check the format of string entered" allow_ov="0" category="NA" description="The format of user name is wrong." mid="5002" midName="MSG_ID_CMS_WRONG_USER_NAME_FORMAT" name="Invalid User Name Format" severity="Error"/>
+			<Message ack="0" action="Plaese check the format of string entered" allow_ov="0" category="NA" description="The format of user password is wrong." mid="5003" midName="MSG_ID_CMS_WRONG_USER_WRONG_FORMAT" name="Invalid User Password Format" severity="Error"/>
+			<Message ack="0" action="Plaese check the user role entered" allow_ov="0" category="NA" description="The user role specified doesn't exist" mid="5004" midName="MSG_ID_CMS_USER_ROLE_NOT_EXIST" name="Invalid User Role" severity="Error"/>
+			<Message ack="0" action="Plaese check the user right entered" allow_ov="0" category="NA" description="The user right specified doesn't exist" mid="5005" midName="MSG_ID_CMS_USER_RIGHT_NOT_EXIST" name="Invalid User Right" severity="Error"/>
+			<Message ack="0" action="Wait for a moment and try again" allow_ov="0" category="NA" description="The service paused" mid="5006" midName="MSG_ID_CMS_SERVICE_PAUSE" name="Service Pause" severity="Warn"/>
+			<Message ack="0" action="connect to the service adminstrator" allow_ov="0" category="NA" description="The service stoped" mid="5007" midName="MSG_ID_CMS_SERVICE_STOP" name="Service Stop" severity="Error"/>
+		</Group>
+		<Group name="CHAIR">
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="INTERNAL_INTERLOCK" description="Chair connection lost" mid="500" midName="MSG_ID_CHAIR_CONNECTION_LOST" name="Chair Lost" severity="Warn"/>
+		</Group>
+		<Group name="COUCH">
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="INTERNAL_INTERLOCK" description="Couch connection lost" mid="1000" midName="MSG_ID_COUCH_CONNECTION_LOST" name="Couch Lost" severity="Warn"/>
+		</Group>
+		<Group name="GANTRY">
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="INTERNAL_INTERLOCK" description="Gantry connection lost" mid="1500" midName="MSG_ID_GANTRY_CONNECTION_LOST" name="Gantry Lost" severity="Warn"/>
+		</Group>
+		<Group name="SNS">
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Lost DCS Operational permit, tripping interlock" mid="2500" midName="MSG_ID_SNS_LOST_OPERATIONAL_PERMIT" name="Lost DCS Operational permit" severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="See error log." mid="2501" midName="MSG_ID_SNS_CONNECTING_CONTROLLER_ERROR" name="Error connecting to controllers" severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Error configuring devices.
+Error setting device configuraiton.
+Error initiating devices.
+Error setting controller configuration.
+Error setting sub-device configuration." mid="2502" midName="MSG_ID_SNS_DEVICE_SETUP_ERROR" name="Device setup error" severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Error clearing device errors.
+Error aborting scan.
+Error starting scan.
+Error arming controllers." mid="2503" midName="MSG_ID_SNS_DEVICE_COMMAND_ERROR" name="Device command system error" severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="LoadI128BackgroundOffsets failed.
+I128 Background offsets expired." mid="2504" midName="MSG_ID_SNS_LOADING_BG_OFFSET_ERROR" name="Error loading background offsets." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="No I128 Background offset directory." mid="2505" midName="MSG_ID_SNS_BG_OFFSET_DATA_ERROR" name="Background offset data files error." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="I128 Compensations not set.
+I128 Offset Compensations not set correctly.
+I128 HCC Offset Compensation not set correctly.
+I128 HCC Gain Compensation not set correctly.
+Invalid %1 % (parameter)" mid="2506" midName="MSG_ID_SNS_HW_CONF_ERROR" name="Hardware configuration error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="(%1 %2 error %3.) % (device name, command, PTC errorCode)
+(%1 %2 error %3: %4) % (device name, command, PTC error code, error message)" mid="2507" midName="MSG_ID_SNS_DEVICE_CMD_ERROR" name="Device command error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Comms watchdog timer expired." mid="2508" midName="MSG_ID_SNS_DEVICE_COMMU_ERROR" name="Device communications error." severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Invalid map size.
+Map validation error.
+(various errors from map2map library)" mid="2509" midName="MSG_ID_SNS_MAP_VALIDATION_ERROR" name="Map validation error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Correction for %1 rejected: %2
+Error requesting beam offsets.
+Error getting beam offsets." mid="2510" midName="MSG_ID_SNS_INIT_OFFSET_CORRECTION_ERROR" name="Initial offset correction error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="(various errors from map2map library)" mid="2511" midName="MSG_ID_SNS_SAVING_MAP_FILE_ERROR" name="Error saving map files" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Error loading map: session %1 already exists.
+Error creating time-slice data files.
+Error writing scan correction data files." mid="2512" midName="MSG_ID_SNS_CREATING_SESSION_FILE_ERROR" name="Error creating session files" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Received a different map from the currently loaded map." mid="2513" midName="MSG_ID_SNS_MAP_VALIDATION_ERROR_2" name="Map validation error" severity="Warn"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="(various errors from map2map library)" mid="2514" midName="MSG_ID_SNS_LOADING_MAP_ERROR" name="Error loading map" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Requested session does not exist: %1
+(various errors from map2map library)
+Error loading session: Error backing up spot_data.csv.
+Error creating session files.
+Error loading session: Error backing up timeslice_data.csv.
+Error loading session: Error backing up timeslice_data_device_units.csv." mid="2515" midName="MSG_ID_SNS_LOADING_SESSION_ERROR" name="Error loading session" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Correction for %1 rejected: %2" mid="2516" midName="MSG_ID_SNS_APPLY_SCAN_CORRECTION_ERROR" name="Error applying scan correction." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Lost scanning permit, tripping interlock: %1" mid="2517" midName="MSG_ID_SNS_LOST_SCANNING_PERMIT" name="Lost scanning permit" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Lost beam continue permit, tripping interlock: %1" mid="2518" midName="MSG_ID_SNS_LOST_BEAM_CONTINUE_PERMIT" name="Lost beam continue permit" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Timeout in state: %1" mid="2519" midName="MSG_ID_SNS_LAYER_SETUP_TMO" name="Setting up the scan layer or collecting scan data timed out." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Timeout loading map or getting initial corrections." mid="2520" midName="MSG_ID_SNS_MAP_PREPARING_TMO" name="Map preparing timeout" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Lost armed permit, tripping interlock: %1" mid="2521" midName="MSG_ID_SNS_LOST_ARMED_PERMIT" name="Lost armed permit" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="(various errors from map2map library)" mid="2522" midName="MSG_ID_SNS_SAVING_TIME_SLICE_DATA_ERROR" name="Error saving time-slice data files." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="" mid="2523" midName="MSG_ID_SNS_BEAMLINE_LAYER_PREPARE_FAILED" name="Beamline layer prepare failed." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="" mid="2524" midName="MSG_ID_SNS_ACCEL_LAYER_PREPARE_FAILED" name="Accelerator layer prepare failed." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Error writing IC calibration data file for %1
+Error writing %1: %2 (file, error)
+(various errors from map2map library)" mid="2525" midName="MSG_ID_SNS_SAVING_SESSION_CALIB_FILE_ERROR" name="Error saving session calibration or configuration files." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="CollectI128BackgroundOffsets failed." mid="2526" midName="MSG_ID_SNS_COLLECTING_BG_OFFSET" name="Error collecting background offsets." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="(various errors from map2map library)" mid="2527" midName="MSG_ID_SNS_MALFORMED_DATA_RECEIVED" name="Malformed data received. Manual data recovery required." severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Recovered data for session: %1" mid="2528" midName="MSG_ID_SNS_DATA_RECOVER_COMPLETE" name="Data recovery complete." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Error loading session for recovery." mid="2529" midName="MSG_ID_SNS_DATA_RECOVER_ERROR" name="Data recovery error." severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Data received for session: %1 layer: %2 run: %3" mid="2530" midName="MSG_ID_SNS_UNEXPECTED_DATA_RECEIVED" name="Unexpected data received. Data recovery required." severity="Critical"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="%1 Found corrupt NVRAM data from a previous session. Data recovery may be required. % (device name)" mid="2531" midName="MSG_ID_SNS_CORRUPT_NVRAM_DATA_FOUND_FROM_PRE_SESSION" name="Found corrupt NVRAM data from a previous session. Data recovery may be required." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="%1 Found NVRAM data from a previous session. Data recovery required.  % (device name)
+See error log." mid="2532" midName="MSG_ID_SNS_SAVING_TIME_SLICE_DATA_ERROR_2" name="Found NVRAM data from a previous session for at least once device. Data recovery required. Scanning will not be allowed." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="(various errors from map2map library)
+No timestamp in time-slice data" mid="2533" midName="MSG_ID_SNS_UPDATE_TIME_SLICE_DATA_ERROR" name="Error updating time-slice data" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="(various errors from map2map library)" mid="2534" midName="MSG_ID_SNS_UPDATE_SPOT_DATA_ERROR" name="Error updating spot data" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] (various errors from Pyramid controllers)" mid="2535" midName="MSG_ID_SNS_DEVICE_REPORT_ERROR" name="Error reported by device" severity="Warn"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] (various errors from Pyramid controllers)" mid="2536" midName="MSG_ID_SNS_OTHER_SCAN_ERROR" name="Other scan error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2537" midName="MSG_ID_SNS_UNEXPECTED_BEAM__ERROR" name="Unexpected beam error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2538" midName="MSG_ID_SNS_DOSE_RATE_ERROR" name="Dose rate error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2539" midName="MSG_ID_SNS_DOSE_ERROR" name="Dose error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2540" midName="MSG_ID_SNS_DOSE_TIME_ERROR" name="Dose time error" severity="Warn"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2541" midName="MSG_ID_SNS_DOSE_MEASUREMENT_ERROR" name="Dose measurement error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2542" midName="MSG_ID_SNS_DOSE_CONTROL_ERROR" name="Dose control error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 '%3' test %4 '%5' %6[%7,%8]" mid="2543" midName="MSG_ID_SNS_BEAM_POSITION_ERROR" name="Beam position error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2544" midName="MSG_ID_SNS_BEAM_SIZE_ERROR" name="Beam size error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test %3 '%4' %5[%6,%7]" mid="2545" midName="MSG_ID_SNS_BEAM_SHAP_ERROR" name="Beam shape error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 '%3' test %4 '%5' %6[%7,%8]" mid="2546" midName="MSG_ID_SNS_SCAN_MOVE_ERROR" name="Scan move error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 Error sending timeslice database: %3
+[From %1] Map failed: TS=%2 Error sending database: %3" mid="2547" midName="MSG_ID_SNS_INTERMITTENT_ERROR" name="Intermittent error sending data from control system." severity="Warn"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 IO Message error %3 on loop %4 address %5
+[From %1] Map failed: TS=%2 IO Message timeout on loop %3 address %4" mid="2548" midName="MSG_ID_SNS_COMMU_ERROR_WITH_SYSTEM_HW" name="Error communicating between control system hardware." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 Board error on loop %3 address %4" mid="2549" midName="MSG_ID_SNS_CONTROL_SYSTEM_HW_ERROR" name="Control system hardware error." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 Sync message timeslice mismatch (remote %3: %4).
+[From %1] Map failed: TS=%2 Sync message spot mismatch (remote %3: %4).
+[From %1] Map failed: TS=%2 Sync message error on loop %3: %4
+[From %1] Map failed: TS=%2 Sync message error %3 on loop %4.
+[From %1] Map failed: TS=%2 Sync message timeout on loop %3.
+[From %1] Map failed: TS=%2 Sync message received early on loop %3." mid="2550" midName="MSG_ID_SNS_COMMU_ERROR_WITH_SYSTEM_HW_2" name="Error communicating between control system hardware." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 Timeslice overrun (master) by %3." mid="2551" midName="MSG_ID_SNS_REAL_TIME_CONTROL_ERROR" name="Real time control error." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="[From %1] Map failed: TS=%2 'dosimetry' test 0 'map_checksum' %3[%4]" mid="2552" midName="MSG_ID_SNS_MAP_VALIDATION_ERROR_3" name="Map validation error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="%1 Hard interlock faulted." mid="2553" midName="MSG_ID_SNS_HW_INTERLOCK_FAULT" name="Hard interlock fault." severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="%1 I128 cable connectivity check faulted" mid="2554" midName="MSG_ID_SNS_ONE_I128_CABLE_NOT_CHECKED" name="one I128 cable not checked/ok" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="not all I128 cable connectivity check OK" mid="2555" midName="MSG_ID_SNS_NOT_ALL_I128_CHECKED" name="not all  I128s cable checked OK" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="I128 strip gains not calibrated
+I128 strip offsets not calibrated.
+I128 Calibration File does not have enough data
+I128 calibration changed
+I128 HCC offsets not calibrated
+I128 HCC gains not calibrated" mid="2556" midName="MSG_ID_SNS_PROCESS_CALIBRATION" name="ProcessCalibration" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="collect HV Toggle strip data is aborted" mid="2557" midName="MSG_ID_SNS_HV_CONTINUITY_TEST_ERROR" name="HV continuity test error" severity="Error"/>
+			<Message ack="0" action="Not Defined" allow_ov="0" category="NA" description="Correction for %1 accepted. Cumulative correction: %2mm
+%1 Cleared NVRAM data." mid="2558" midName="MSG_ID_SNS_NOTICE" name="Notice" severity="Info"/>
+		</Group>
+		<Group name="TCS">
+			<Message ack="0" action="nothing" allow_ov="0" category="NA" description="Unknown error" mid="3500" midName="MSG_ID_TCS_UNKNOWN_ERROR" name="Unkonw Error" severity="Warn"/>
+			<Message ack="0" action="nothing" allow_ov="0" category="NA" description="The user specified had login" mid="3501" midName="MSG_ID_TCS_USER_ALREADY_LOGIN" name="User Already Logined" severity="Warn"/>
+			<Message ack="0" action="Please login first" allow_ov="0" category="NA" description="No user logined" mid="3502" midName="MSG_ID_TCS_USER_NEED_LOGIN" name="Need Login First" severity="Warn"/>
+			<Message ack="0" action="Please make sure the plan file exists" allow_ov="0" category="NA" description="The plan file does not exists" mid="3503" midName="MSG_ID_TCS_PLAN_FILE_NOT_EXISTS" name="Plan File Not Found" severity="Warn"/>
+			<Message ack="0" action="Please make sure the permission of the plan file" allow_ov="0" category="NA" description="The plan file could not be accessed" mid="3504" midName="MSG_ID_TCS_PLAN_FILE_NOT_ACCESSED" name="Plan File Not Accessible" severity="Warn"/>
+			<Message ack="0" action="Please select a valid plan file" allow_ov="0" category="NA" description="The file is not a treatment plan file" mid="3505" midName="MSG_ID_TCS_PLAN_FILE_NOT_VALID" name="Plan File Wrong Format" severity="Warn"/>
+			<Message ack="0" action="Please select a non-clinical plan or switch your role" allow_ov="0" category="NA" description="Current user has no right to access the contents of clinical plan" mid="3506" midName="MSG_ID_TCS_NO_RIGHT_FOR_CLINICAL_PLAN" name="No Right to Aceess Clinical Plan" severity="Warn"/>
+			<Message ack="0" action="Please select a clinical plan or switch your role" allow_ov="0" category="NA" description="Current user has no right to access the contents of non-clinical plan" mid="3507" midName="MSG_ID_TCS_NO_RIGHT_FOR_NON_CLINICAL_PLAN" name="No Right to Aceess None Clinical Plan" severity="Warn"/>
+			<Message ack="0" action="Please select a supported plan" allow_ov="0" category="NA" description="The intent of selected has not been supported yet" mid="3508" midName="MSG_ID_TCS_UNSUPPORTED_PLAN_INTENT" name="Plan Not Support" severity="Warn"/>
+			<Message ack="0" action="Please load a plan either from OIS or from file" allow_ov="0" category="NA" description="There's no plan loaded" mid="3509" midName="MSG_ID_TCS_NO_PLAN_LOADED" name="No Plan Loaded" severity="Warn"/>
+			<Message ack="0" action="Please select a supported Loading plan type" allow_ov="0" category="NA" description="The selected loading plan type has not been supported yet" mid="3510" midName="MSG_ID_TCS_UNSUPPORTED_LOAD_PLAN_TYPE" name="Unsupported Plan Type" severity="Warn"/>
+			<Message ack="0" action="Please check user name specified" allow_ov="0" category="NA" description="The user specified does't match current" mid="3511" midName="MSG_ID_TCS_USER_NOT_MATCH_CURRENT" name="User Not Matched Current" severity="Warn"/>
+			<Message ack="0" action="Please wait until tcs started" allow_ov="0" category="NA" description="TCS is not ready to operate" mid="3512" midName="MSG_ID_TCS_NOT_READY_TO_OPERATE" name="TCS not ready to operate" severity="Warn"/>
+			<Message ack="0" action="Please double check parameters" allow_ov="0" category="NA" description="The parameters of request sent to tcs is incompleted" mid="3513" midName="MSG_ID_TCS_INCOMPLETED_REQUEST_FIELDS" name="Incompleted Request Fields" severity="Error"/>
+			<Message ack="0" action="Please check with OIS schedular" allow_ov="0" category="NA" description="Too many plans found" mid="3514" midName="MSG_ID_TCS_TOO_MANY_PLANS" name="Too Many Plan Found" severity="Error"/>
+			<Message ack="0" action="Please press motion button on keypad or pandent" allow_ov="0" category="NA" description="Motion is ready" mid="3515" midName="MSG_ID_TCS_READY_TO_MOTION" name="Ready to Motion" severity="Info"/>
+			<Message ack="0" action="Please press beam on button on tkp to enable delivery" allow_ov="0" category="NA" description="System is ready to delivery" mid="3516" midName="MSG_ID_TCS_READY_TO_BEAM_ON" name="Ready to Beam On" severity="Info"/>
+		</Group>
+		<Group name="BSS">
+			<Message ack="0" action="Please check the log in BSS" allow_ov="0" category="NA" description="Failed in scheduling the beam request" mid="3000" midName="MSG_ID_BSS_ERROR_EXISTS" name="BSS Error" severity="Warn"/>
+		</Group>
+		<Group name="SAF">
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="DOOR" description="ACCR Door Open" mid="6000" midName="MSG_ID_SAF_ACCR_DOOR_OPEN" name="Accelerator Room Door Opened" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="DOOR" description="ACCR unsecured" mid="6001" midName="MSG_ID_SAF_ACCR_UNSECURED" name="Accelerator Room  Unsecured" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="NO_BEAM" description="ACS interlock fault " mid="6002" midName="MSG_ID_SAF_ACS_FAULT" name="ACS Fault" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="ESTOP" description="ACCR E-Stop1 Pressed" mid="6003" midName="MSG_ID_SAF_ACCR_ESTOP1" name="Accelerator Room ESTOP 1" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="ESTOP" description="ACCR E-Stop2 Pressed" mid="6004" midName="MSG_ID_SAF_ACCR_ESTOP2" name="Accelerator Room ESTOP 2" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="ESTOP" description="ACCR E-Stop3 Pressed" mid="6005" midName="MSG_ID_SAF_ACCR_ESTOP3" name="Accelerator Room ESTOP 3" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="ESTOP" description="TMR E-Stop1 Pressed" mid="6006" midName="MSG_ID_SAF_TMR_ESTOP1" name="Treatment Room ESTOP 1" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="ESTOP" description="TMR E-Stop2 Pressed" mid="6007" midName="MSG_ID_SAF_TMR_ESTOP2" name="Treatment Room ESTOP 2" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="DOOR" description="TMR Door Open" mid="6008" midName="MSG_ID_SAF_TMR_DOOR_OPEN" name="Treatment Room Door Opened" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="DOOR" description="TMR unsecured" mid="6009" midName="MSG_ID_SAF_TMR_UNSECURED" name="Treatment Room Unsecured" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="ESTOP" description="TMCR TKP E-Stop Pressed" mid="6010" midName="MSG_ID_SAF_TKP_ESTOP" name="Keypad ESTOP" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="MOTION_COLLISION" description="TMR  gantry collision fault " mid="6011" midName="MSG_ID_SAF_GANTRY_COLLISION_FAULT" name="Gantry Collision" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="MOTION_COLLISION" description="TMR gantry interlock fault " mid="6012" midName="MSG_ID_SAF_GANTRY_INTERLOCK_FAULT" name="Gantry Interlock" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="INTERNAL_INTERLOCK" description="gantry is disable" mid="6013" midName="MSG_ID_SAF_GANTRY_MOTION_DISABLE" name="Gantry Motion Disabled" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="MOTION_COLLISION" description="TMR couch collision fault " mid="6014" midName="MSG_ID_SAF_COUCH_COLLISION_FAULT" name="Couch Collision" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="MOTION_COLLISION" description="TMR couch interlock fault " mid="6015" midName="MSG_ID_SAF_COUCH_INTERLOCK_FAULT" name="Couch Interlock" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="INTERNAL_INTERLOCK" description="couch is disable" mid="6016" midName="MSG_ID_SAF_COUCH_MOTION_DISABLE" name="Couch Motion Disabled" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="MOTION_COLLISION" description="TMR couch collision fault " mid="6017" midName="MSG_ID_SAF_CHAIR_COLLISION_FAULT" name="Chair Collision" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="MOTION_COLLISION" description="TMR chair interlock fault" mid="6018" midName="MSG_ID_SAF_CHAIR_INTERLOCK_FAULT" name="Chair Interlock" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="INTERNAL_INTERLOCK" description="Chair is disable" mid="6019" midName="MSG_ID_SAF_CHAIR_MOTION_DISABLE" name="Chair Motion Disabled" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="NO_BEAM" description="TMR scan nozzle fault" mid="6020" midName="MSG_ID_SAF_SNS_INTERLOCK_FAULT" name="Nozzle Fault" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="NO_BEAM" description="SNS is disable" mid="6021" midName="MSG_ID_SAF_SNS_BEAM_DISABLE" name="Nozzle Beam Disabled" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="IMAGER" description="TMR position verification fault" mid="6022" midName="MSG_ID_SAF_PVS_INTERLOCK_FAULT" name="PVS Interlock" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="IMAGER" description="XRAY disable" mid="6023" midName="MSG_ID_SAF_PVS_XRAY_DISABLE" name="PVS Xray Disabled" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="INTERNAL_INTERLOCK" description="SAF system fault" mid="6024" midName="MSG_ID_SAF_SAF_FAULT" name="Safety Fault" severity="Warn"/>
+		</Group>
+		<Group name="AIN">
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="NO_BEAM" description="Beam size fault" mid="7000" midName="MSG_ID_ACS_BEAM_SIZE_FAULT" name="Beam Size" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="NO_BEAM" description="Beam path not clear" mid="7001" midName="MSG_ID_ACS_BEAM_PATH_NOT_CLEAR" name="Beam Path" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="NO_BEAM" description="Cannot deliver beam" mid="7002" midName="MSG_ID_ACS_CANNOT_DELIVER_BEAM" name="Beam Delivery" severity="Warn"/>
+			<Message ack="1" action="please contact with service engineer" allow_ov="0" category="NO_BEAM" description="communication issue with the scanning nozzle" mid="7003" midName="MSG_ID_ACS_NOZZLE_COMM_FAULT" name="Nozzle Communication" severity="Warn"/>
+		</Group>
+		<Group name="SITE">
+			<Message ack="0" action="Please do machine QA" allow_ov="1" category="SITE_POLICY" description="Machine QA has overdue since last process" mid="7500" midName="MSG_ID_SITE_PLOLICY_MACHINE_QA_OVERDUE" name="Machine QA overdue" severity="Warn"/>
+		</Group>
+	</NewRTMessages>

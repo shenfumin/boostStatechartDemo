@@ -1,0 +1,8 @@
+add_subdirectory(dev)
+add_subdirectory(keyStateMachine)
+add_subdirectory(infrastructure)
+set(module_name tkpApp)
+aux_source_directory(. SRC_FILES)
+add_executable(${module_name} ${SRC_FILES})
+target_include_directories(${module_name} PRIVATE ${CMAKE_HOME_DIRECTORY}/include)
+target_link_libraries(${module_name} PRIVATE dev infrastructure statemachine dds idl trait boost_program_options) 

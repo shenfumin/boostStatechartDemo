@@ -1,0 +1,38 @@
+<?xml version="1.0" encodeing="utf-8"?>
+<dds_manager>
+    <profiles>
+        <profile id="profile_1" value="foo_Library::foo_Profile_1" default="true" />
+        <profile id="profile_2" value="foo_Library::foo_Profile_2" />
+    </profiles>
+    <participants>
+        <participant id="participant_1" domain="1" profile="profile_1" default="true"/>
+        <participant id="participant_room_1" domain="1" profile="profile_1" />
+        <participant id="participant_room_2" domain="2" profile="profile_1" />
+    </participants>
+    <publishers>
+        <publisher id="publisher_1" participant="participant_1" profile="profile_1" default="true"/>
+        <publisher id="publisher_room_1" participant="participant_room_1" profile="profile_1" />
+        <publisher id="publisher_room_2" participant="participant_room_2" profile="profile_1" />
+    </publishers>
+    <subscribers>
+        <subscriber id="subscriber_1" participant="participant_1" profile="profile_1" default="true"/>
+        <subscriber id="subscriber_room_1" participant="participant_room_1" profile="profile_1" />
+        <subscriber id="subscriber_room_2" participant="participant_room_2" profile="profile_1" />
+    </subscribers>
+    <sub_topics>
+        <topic id="HelloWorld" subscriber="subscriber_1" profile="profile_1" />
+        <topic id="Foo2" subscriber="subscriber_1" profile="profile_2" />
+        <topic id="RoomTopicToRoom" subscriber="subscriber_room_1" profile="profile_1" />
+        <topic id="RoomTopicToRoom" subscriber="subscriber_room_2" profile="profile_1" />
+        <topic id="RoomTopicFromRoom" subscriber="subscriber_room_1" profile="profile_1" />
+        <topic id="RoomTopicFromRoom" subscriber="subscriber_room_2" profile="profile_1" />
+    </sub_topics>
+    <pub_topics>
+        <topic id="HelloWorld" publisher="publisher_1" profile="profile_1" />
+        <topic id="Foo2" publisher="publisher_1" profile="profile_2" />
+        <topic id="RoomTopicToRoom" publisher="publisher_room_1" profile="profile_1" />
+        <topic id="RoomTopicToRoom" publisher="publisher_room_2" profile="profile_1" />
+        <topic id="RoomTopicFromRoom" publisher="publisher_room_1" profile="profile_1" />
+        <topic id="RoomTopicFromRoom" publisher="publisher_room_2" profile="profile_1" />
+    </pub_topics>
+</dds_manager>

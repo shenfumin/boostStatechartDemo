@@ -1,0 +1,46 @@
+#
+# Author: Liu Bangguo
+# Email: liubg@new-rt.com
+# Date: 2018.11.08
+#
+
+set(module_name functest)
+
+MESSAGE(STATUS "[submodule] ${micro_lib_dir}")
+link_directories(${micro_lib_dir})
+
+add_executable(ft_publisher
+    ft_publisher.cpp
+    Foo.cxx
+    FooPlugin.cxx
+    FooSupport.cxx
+)
+target_link_libraries(ft_publisher
+    dds
+	rti_me_cppd
+	rti_me_rhsmd
+	rti_me_whsmd
+	rti_me_discdpded
+	rti_me_discdpsed
+	rti_med
+)
+
+add_executable(ft_subscriber
+    ft_subscriber.cpp
+    Foo.cxx
+    FooPlugin.cxx
+    FooSupport.cxx
+)
+target_link_libraries(ft_subscriber
+    dds
+	rti_me_cppd
+	rti_me_rhsmd
+	rti_me_whsmd
+	rti_me_discdpded
+	rti_me_discdpsed
+	rti_med
+)
+
+
+#set_target_properties(ft_publisher PROPERTIES INTERFACE_LINK_LIBRARIES "${micro_lib_dir}/rti_me_cpp.so";"${micro_lib_dir}/rti_me_rhsm.so";"${micro_lib_dir}/rti_me_whsm.so";)
+#set_target_properties(ft_subscriber PROPERTIES INTERFACE_LINK_LIBRARIES ${micro_lib_dir})

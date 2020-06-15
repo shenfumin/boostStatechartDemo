@@ -1,0 +1,17 @@
+struct Foo {
+    long x; //@key
+    long y;
+};
+struct MyType {
+    long my_long;
+    string<512> my_string;
+    Foo my_foo;
+    sequence<long, 10> my_sequence;
+    Foo my_array[5];
+    Foo my_optional; //@Optional
+};
+struct MyOtherType {
+    long m1;
+    double m2;
+    string m3;
+};

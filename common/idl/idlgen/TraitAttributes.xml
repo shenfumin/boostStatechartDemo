@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<TraitAttributes>
+		<Version major="0" minor="0" patch="0" text="0.0.0"/>
+		<Group name="User">
+			<Attribute description="User name" highValue="" lowValue="" name="USER_USER_NAME" purpose="Clinical" tid="6500" tidName="TRAIT_ID_USER_INFO_USER_NAME" type="string"/>
+			<Attribute description="User first name" highValue="" lowValue="" name="USER_FIRST_NAME" purpose="Clinical" tid="6501" tidName="TRAIT_ID_USER_INFO_FIRST_NAME" type="string"/>
+			<Attribute description="User family name" highValue="" lowValue="" name="USER_FAMILY_NAME" purpose="Clinical" tid="6502" tidName="TRAIT_ID_USER_INFO_FAMILY_NAME" type="string"/>
+			<Attribute description="User gender" highValue="" lowValue="" name="USER_GENDER" purpose="Clinical" tid="6503" tidName="TRAIT_ID_USER_INFO_GENDER" type="string"/>
+			<Attribute description="User birth date" highValue="" lowValue="" name="USER_BIRTHDATE" purpose="Clinical" tid="6504" tidName="TRAIT_ID_USER_INFO_BIRTHDATE" type="string"/>
+			<Attribute description="email of user" highValue="" lowValue="" name="USER_EMAIL" purpose="Clinical" tid="6505" tidName="TRAIT_ID_USER_INFO_EMAIL" type="string"/>
+			<Attribute description="phone number of user" highValue="" lowValue="" name="USER_PHONE_NUMBER" purpose="Clinical" tid="6506" tidName="TRAIT_ID_USER_INFO_PHONE_NUMBER" type="string"/>
+			<Attribute description="address of the user" highValue="" lowValue="" name="USER_ADDRESS" purpose="Clinical" tid="6507" tidName="TRAIT_ID_USER_INFO_ADDRESS" type="string"/>
+			<Attribute description="password of the user" highValue="" lowValue="" name="USER_PASSWORD" purpose="Clinical" tid="6508" tidName="TRAIT_ID_USER_INFO_PASSWORD" type="string"/>
+			<Attribute description="user account state" highValue="" lowValue="" name="USER_STATE" purpose="Clinical" tid="6509" tidName="TRAIT_ID_USER_INFO_STATE" type="short"/>
+			<Attribute description="identifier of user role " highValue="" lowValue="" name="ROLE_ID" purpose="Clinical" tid="6510" tidName="TRAIT_ID_USER_ROLE_ID" type="short"/>
+			<Attribute description="name of user role " highValue="" lowValue="" name="ROLE_NAME" purpose="Clinical" tid="6511" tidName="TRAIT_ID_USER_ROLE_NAME" type="string"/>
+			<Attribute description="description of user role " highValue="" lowValue="" name="ROLE_DESCRIPTION" purpose="Clinical" tid="6512" tidName="TRAIT_ID_USER_ROLE_DESCRIPTION" type="string"/>
+			<Attribute description="identifier of user permission " highValue="" lowValue="" name="RIGHT_ID" purpose="Clinical" tid="6513" tidName="TRAIT_ID_USER_RIGHT_ID" type="short"/>
+			<Attribute description="name of user permission " highValue="" lowValue="" name="RIGHT_NAME" purpose="Clinical" tid="6514" tidName="TRAIT_ID_USER_RIGHT_NAME" type="string"/>
+			<Attribute description="descriptio of user permission " highValue="" lowValue="" name="RIGHT_DESCRIPTION" purpose="Clinical" tid="6515" tidName="TRAIT_ID_USER_RIGHT_DESCRIPTION" type="string"/>
+			<Attribute description="indicate if user login" highValue="" lowValue="" name="LOGIN_STATE" purpose="Clinical" tid="6516" tidName="TRAIT_ID_USER_LOGIN_STATE" type="boolean"/>
+			<Attribute description="current role of user" highValue="" lowValue="" name="CURRENT_ROLE" purpose="Clinical" tid="6517" tidName="TRAIT_ID_USER_CURRENT_ROLE" type="short"/>
+			<Attribute description="result of user operation " highValue="" lowValue="" name="CMS_OPERATION_RESULT" purpose="Clinical" tid="6518" tidName="TRAIT_ID_CMS_OPERATION_RESULT" type="short"/>
+		</Group>
+		<Group name="Room">
+			<Attribute description="Room Id" highValue="" lowValue="" name="ROOM_INFO_ROOM_ID" purpose="TreatmentRoom" tid="7500" tidName="TRAIT_ID_ROOM_ID" type="short"/>
+			<Attribute description="Room name" highValue="" lowValue="" name="ROOM_INFO_ROOM_NAME" purpose="TreatmentRoom" tid="7501" tidName="TRAIT_ID_ROOM_NAME" type="string"/>
+			<Attribute description="Room description" highValue="" lowValue="" name="ROOM_INFO_DESCRIPTION" purpose="TreatmentRoom" tid="7502" tidName="TRAIT_ID_ROOM_DESCRIPTION" type="string"/>
+			<Attribute description="Room type for gantry or chair" highValue="" lowValue="" name="ROOM_TYPE" purpose="TreatmentRoom" tid="7503" tidName="TRAIT_ID_ROOM_TYPE" type="short"/>
+		</Group>
+		<Group name="TCS">
+			<Attribute description="tcs operation request id" highValue="" lowValue="" name="TCS_OPERATION_REQ_ID" purpose="Clinical" tid="5000" tidName="TRAIT_ID_TCS_OPERATION_REQ_ID" type="short"/>
+			<Attribute description="state of tcs operation " highValue="" lowValue="" name="TCS_OPERATION_STATE" purpose="Clinical" tid="5001" tidName="TRAIT_ID_TCS_OPERATION_STATE" type="short"/>
+			<Attribute description="state of tcs operation " highValue="" lowValue="" name="TCS_OPERATION_ERROR_ID" purpose="Clinical" tid="5002" tidName="TRAIT_ID_TCS_OPERATION_ERROR_ID" type="short"/>
+			<Attribute description="state of tcs login state" highValue="" lowValue="" name="TCS_LOGIN_STATE" purpose="Clinical" tid="5003" tidName="TRAIT_ID_TCS_LOGIN_STATE_ID" type="boolean"/>
+			<Attribute description="TCS System error code" highValue="" lowValue="" name="TCS_ERROR_CODE" purpose="Clinical" tid="5004" tidName="TRAIT_ID_TCS_ERROR_CODE" type="unsigned long"/>
+			<Attribute description="TCS internal software component identy" highValue="" lowValue="" name="TCS_COMPONENT_ID" purpose="Facility" tid="5005" tidName="TRAIT_ID_TCS_COMPONENT_ID" type="short"/>
+			<Attribute description="TCS internal software component working state" highValue="" lowValue="" name="TCS_COMPONENT_WORKING_STATE" purpose="Facility" tid="5006" tidName="TRAIT_ID_TCS_COMPONENT_WORKING_STATE" type="short"/>
+			<Attribute description="TCS software current working mode" highValue="" lowValue="" name="TCS_WORKING_MODE" purpose="Facility" tid="5007" tidName="TRAIT_ID_TCS_WORKING_MODE" type="short"/>
+			<Attribute description="tcs beam work state id" highValue="" lowValue="" name="TCS_BEAM_WORK_STATE_ID" purpose="Facility" tid="5008" tidName="TRAIT_ID_TCS_BEAM_WORK_STATE_ID" type="short"/>
+			<Attribute description="tcs beam work state name" highValue="" lowValue="" name="TCS_BEAM_WORK_STATE_NAME" purpose="Facility" tid="5009" tidName="TRAIT_ID_TCS_BEAM_WORK_STATE_NAME" type="string"/>
+			<Attribute description="beam delivery type " highValue="" lowValue="" name="TCS_BEAM_DELIVERY_TYPE" purpose="Facility" tid="5010" tidName="TRAIT_ID_TCS_BEAM_DELIVERY_TYPE" type="short"/>
+		</Group>
+		<Group name="Gantry">
+			<Attribute description="TRAIT_ID_GANTRY_ISO_ROTATE_TARGET_ANGLE" highValue="" lowValue="" name="TRAIT_ID_GANTRY_ISO_ROTATE_TARGET_ANGLE" purpose="" tid="1500" tidName="TRAIT_ID_TARGET_GANTRY_ISO_ROTATE_ANGLE" type="float"/>
+			<Attribute description="TRAIT_ID_GANTRY_ISO_ROTATE_ACCELERATED_SPEED" highValue="" lowValue="" name="TRAIT_ID_GANTRY_ISO_ROTATE_ACCELERATED_SPEED" purpose="" tid="1501" tidName="TRAIT_ID_TARGET_GANTRY_ISO_ROTATE_ACCELERATED_SPEED" type="float"/>
+			<Attribute description="TRAIT_ID_GANTRY_ISO_ROTATE_SPEED" highValue="" lowValue="" name="TRAIT_ID_GANTRY_ISO_ROTATE_SPEED" purpose="" tid="1502" tidName="TRAIT_ID_TARGET_GANTRY_ISO_ROTATE_SPEED" type="float"/>
+			<Attribute description="GANTRY_RUNTIME_FOR_MOTOR" highValue="" lowValue="" name="GANTRY_RUNTIME_FOR_MOTOR" purpose="" tid="1503" tidName="TRAIT_ID_GANTRY_RUNTIME_FOR_MOTOR" type="long"/>
+			<Attribute description="GANTRY_RUNTIME_FOR_GANTRY" highValue="" lowValue="" name="GANTRY_RUNTIME_FOR_GANTRY" purpose="" tid="1504" tidName="TRAIT_ID_GANTRY_RUNTIME_FOR_GANTRY" type="long"/>
+			<Attribute description="GANTRY_MOTION_VERTICAL_TOLERANCE" highValue="" lowValue="" name="GANTRY_MOTION_VERTICAL_TOLERANCE" purpose="" tid="1505" tidName="TRAIT_ID_GANTRY_MOTION_VERTICAL_TOLERANCE" type="short"/>
+			<Attribute description="GANTRY_MOTION_LATERAL_TOLERANCE" highValue="" lowValue="" name="GANTRY_MOTION_LATERAL_TOLERANCE" purpose="" tid="1506" tidName="TRAIT_ID_GANTRY_MOTION_LATERAL_TOLERANCE" type="short"/>
+			<Attribute description="GANTRY_MOTION_LONGITUDINAL_TOLERANCE" highValue="" lowValue="" name="GANTRY_MOTION_LONGITUDINAL_TOLERANCE" purpose="" tid="1507" tidName="TRAIT_ID_GANTRY_MOTION_LONGITUDINAL_TOLERANCE" type="short"/>
+			<Attribute description="GANTRY_ERROR_CODE" highValue="" lowValue="" name="GANTRY_ERROR_CODE" purpose="" tid="1508" tidName="TRAIT_ID_GANTRY_ERROR_CODE" type="short"/>
+			<Attribute description="GANTRY_ERROR_TIMES" highValue="" lowValue="" name="GANTRY_ERROR_TIMES" purpose="" tid="1509" tidName="TRAIT_ID_GANTRY_ERROR_TIMES" type="short"/>
+			<Attribute description="GANTRY_VERSION_TEXT" highValue="" lowValue="" name="GANTRY_VERSION_TEXT" purpose="" tid="1510" tidName="TRAIT_ID_GANTRY_VERSION_TEXT" type="string"/>
+			<Attribute description="GANTRY_VERSION_MAJOR" highValue="" lowValue="" name="GANTRY_VERSION_MAJOR" purpose="" tid="1511" tidName="TRAIT_ID_GANTRY_VERSION_MAJOR" type="string"/>
+			<Attribute description="GANTRY_VERSION_MINOR" highValue="" lowValue="" name="GANTRY_VERSION_MINOR" purpose="" tid="1512" tidName="TRAIT_ID_GANTRY_VERSION_MINOR" type="string"/>
+			<Attribute description="GANTRY_VERSION_PATCH" highValue="" lowValue="" name="GANTRY_VERSION_PATCH" purpose="" tid="1513" tidName="TRAIT_ID_GANTRY_VERSION_PATCH" type="string"/>
+			<Attribute description="GANTRY_STATUS" highValue="" lowValue="" name="GANTRY_STATUS" purpose="" tid="1514" tidName="TRAIT_ID_GANTRY_STATUS" type="short"/>
+			<Attribute description="GANTRY_ERROR_TEXT" highValue="" lowValue="" name="GANTRY_ERROR_TEXT" purpose="" tid="1515" tidName="TRAIT_ID_GANTRY_ERROR_TEXT" type="string"/>
+			<Attribute description="GANTRY_ERROR_LEVEL" highValue="" lowValue="" name="GANTRY_ERROR_LEVEL" purpose="" tid="1516" tidName="TRAIT_ID_GANTRY_ERROR_LEVEL" type="short"/>
+			<Attribute description="GANTRY_ROTATE_ANGLE" highValue="" lowValue="" name="GANTRY_ROTATE_ANGLE" purpose="" tid="1517" tidName="TRAIT_ID_ACTUAL_GANTRY_ANGLE" type="float"/>
+			<Attribute description="TRAIT_ID_GANTRY_MOTION_TYPE" highValue="" lowValue="" name="TRAIT_ID_GANTRY_MOTION_TYPE" purpose="" tid="1518" tidName="TRAIT_ID_GANTRY_MOTION_TYPE" type="short"/>
+			<Attribute description="TRAIT_ID_GANTRY_ROTATE_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_GANTRY_ROTATE_MAX_LIMIT" purpose="" tid="1519" tidName="TRAIT_ID_GANTRY_ROTATE_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_GANTRY_ROTATE_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_GANTRY_ROTATE_MIN_LIMIT" purpose="" tid="1520" tidName="TRAIT_ID_GANTRY_ROTATE_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_GANTRY_MOTION_REACHED_STATUS_TYPE" highValue="" lowValue="" name="TRAIT_ID_GANTRY_MOTION_REACHED_STATUS_TYPE" purpose="" tid="1521" tidName="TRAIT_ID_GANTRY_MOTION_REACHED_STATUS_TYPE" type="short"/>
+			<Attribute description="TRAIT_ID_TARGET_GANTRY_EXPOSURE_RANGE" highValue="" lowValue="" name="TRAIT_ID_TARGET_GANTRY_EXPOSURE_RANGE" purpose="" tid="1522" tidName="TRAIT_ID_TARGET_GANTRY_EXPOSURE_RANGE" type="float"/>
+			<Attribute description="TRAIT_ID_TARGET_GANTRY_ISO_ROTATE_DECELERATED_SPEED" highValue="" lowValue="" name="TRAIT_ID_TARGET_GANTRY_ISO_ROTATE_DECELERATED_SPEED" purpose="" tid="1523" tidName="TRAIT_ID_TARGET_GANTRY_ISO_ROTATE_DECELERATED_SPEED" type="float"/>
+		</Group>
+		<Group name="Couch">
+			<Attribute description="COUCH_RUNTIME_FOR_MOTOR" highValue="" lowValue="" name="COUCH_RUNTIME_FOR_MOTOR" purpose="" tid="1000" tidName="TRAIT_ID_COUCH_RUNTIME_FOR_MOTOR" type="long"/>
+			<Attribute description="COUCH_RUNTIME_FOR_COUCH" highValue="" lowValue="" name="COUCH_RUNTIME_FOR_COUCH" purpose="" tid="1001" tidName="TRAIT_ID_COUCH_RUNTIME_FOR_COUCH" type="long"/>
+			<Attribute description="COUCH_MOTION_VERTICAL_TOLERANCE" highValue="" lowValue="" name="COUCH_MOTION_VERTICAL_TOLERANCE" purpose="" tid="1002" tidName="TRAIT_ID_COUCH_MOTION_VERTICAL_TOLERANCE" type="short"/>
+			<Attribute description="COUCH_MOTION_LATERAL_TOLERANCE" highValue="" lowValue="" name="COUCH_MOTION_LATERAL_TOLERANCE" purpose="" tid="1003" tidName="TRAIT_ID_COUCH_MOTION_LATERAL_TOLERANCE" type="short"/>
+			<Attribute description="COUCH_MOTION_LONGITUDINAL_TOLERANCE" highValue="" lowValue="" name="COUCH_MOTION_LONGITUDINAL_TOLERANCE" purpose="" tid="1004" tidName="TRAIT_ID_COUCH_MOTION_LONGITUDINAL_TOLERANCE" type="short"/>
+			<Attribute description="COUCH_ERROR_CODE" highValue="" lowValue="" name="COUCH_ERROR_CODE" purpose="" tid="1005" tidName="TRAIT_ID_COUCH_ERROR_CODE" type="short"/>
+			<Attribute description="COUCH_ERROR_TIMES" highValue="" lowValue="" name="COUCH_ERROR_TIMES" purpose="" tid="1006" tidName="TRAIT_ID_COUCH_ERROR_TIMES" type="short"/>
+			<Attribute description="COUCH_VERSION_TEXT" highValue="" lowValue="" name="COUCH_VERSION_TEXT" purpose="" tid="1007" tidName="TRAIT_ID_COUCH_VERSION_TEXT" type="string"/>
+			<Attribute description="COUCH_VERSION_MAJOR" highValue="" lowValue="" name="COUCH_VERSION_MAJOR" purpose="" tid="1008" tidName="TRAIT_ID_COUCH_VERSION_MAJOR" type="string"/>
+			<Attribute description="COUCH_VERSION_MINOR" highValue="" lowValue="" name="COUCH_VERSION_MINOR" purpose="" tid="1009" tidName="TRAIT_ID_COUCH_VERSION_MINOR" type="string"/>
+			<Attribute description="COUCH_VERSION_PATCH" highValue="" lowValue="" name="COUCH_VERSION_PATCH" purpose="" tid="1010" tidName="TRAIT_ID_COUCH_VERSION_PATCH" type="string"/>
+			<Attribute description="COUCH_STATUS" highValue="" lowValue="" name="COUCH_STATUS" purpose="" tid="1011" tidName="TRAIT_ID_COUCH_STATUS" type="short"/>
+			<Attribute description="COUCH_ERROR_TEXT" highValue="" lowValue="" name="COUCH_ERROR_TEXT" purpose="" tid="1012" tidName="TRAIT_ID_COUCH_ERROR_TEXT" type="string"/>
+			<Attribute description="COUCH_ERROR_LEVEL" highValue="" lowValue="" name="COUCH_ERROR_LEVEL" purpose="" tid="1013" tidName="TRAIT_ID_COUCH_ERROR_LEVEL" type="short"/>
+			<Attribute description="COUCH_MOTION_VERTICAL_ANGLE_TOLERANCE" highValue="" lowValue="" name="COUCH_MOTION_VERTICAL_ANGLE_TOLERANCE" purpose="" tid="1014" tidName="TRAIT_ID_COUCH_MOTION_VERTICAL_ANGLE_TOLERANCE" type="short"/>
+			<Attribute description="COUCH_MOTION_LATERAL_ANGLE_TOLERANCE" highValue="" lowValue="" name="COUCH_MOTION_LATERAL_ANGLE_TOLERANCE" purpose="" tid="1015" tidName="TRAIT_ID_COUCH_MOTION_LATERAL_ANGLE_TOLERANCE" type="short"/>
+			<Attribute description="COUCH_MOTION_LONGITUDINAL_ANGLE_TOLERANCE" highValue="" lowValue="" name="COUCH_MOTION_LONGITUDINAL_ANGLE_TOLERANCE" purpose="" tid="1016" tidName="TRAIT_ID_COUCH_MOTION_LONGITUDINAL_ANGLE_TOLERANCE" type="short"/>
+			<Attribute description="COUCH_VERTICAL_POS" highValue="" lowValue="" name="COUCH_VERTICAL_POS" purpose="" tid="1017" tidName="TRAIT_ID_ACTUAL_COUCH_VERTICAL_POS" type="float"/>
+			<Attribute description="COUCH_LATERAL_POS" highValue="" lowValue="" name="COUCH_LATERAL_POS" purpose="" tid="1018" tidName="TRAIT_ID_ACTUAL_COUCH_LATERAL_POS" type="float"/>
+			<Attribute description="COUCH_LONGITUDINAL_POS" highValue="" lowValue="" name="COUCH_LONGITUDINAL_POS" purpose="" tid="1019" tidName="TRAIT_ID_ACTUAL_COUCH_LONGITUDINAL_POS" type="float"/>
+			<Attribute description="COUCH_PITCH_ANGLE" highValue="" lowValue="" name="COUCH_PITCH_ANGLE" purpose="" tid="1020" tidName="TRAIT_ID_ACTUAL_COUCH_PITCH_ANGLE" type="float"/>
+			<Attribute description="COUCH_YAW_ANGLE" highValue="" lowValue="" name="COUCH_YAW_ANGLE" purpose="" tid="1021" tidName="TRAIT_ID_ACTUAL_COUCH_YAW_ANGLE" type="float"/>
+			<Attribute description="COUCH_ROLL_ANGLE" highValue="" lowValue="" name="COUCH_ROLL_ANGLE" purpose="" tid="1022" tidName="TRAIT_ID_ACTUAL_COUCH_ROLL_ANGLE" type="float"/>
+			<Attribute description="COUCH_VERTICAL_POS" highValue="" lowValue="" name="COUCH_VERTICAL_POS" purpose="" tid="1023" tidName="TRAIT_ID_TARGET_COUCH_VERTICAL_POS" type="float"/>
+			<Attribute description="COUCH_LATERAL_POS" highValue="" lowValue="" name="COUCH_LATERAL_POS" purpose="" tid="1024" tidName="TRAIT_ID_TARGET_COUCH_LATERAL_POS" type="float"/>
+			<Attribute description="COUCH_LONGITUDINAL_POS" highValue="" lowValue="" name="COUCH_LONGITUDINAL_POS" purpose="" tid="1025" tidName="TRAIT_ID_TARGET_COUCH_LONGITUDINAL_POS" type="float"/>
+			<Attribute description="COUCH_PITCH_ANGLE" highValue="" lowValue="" name="COUCH_PITCH_ANGLE" purpose="" tid="1026" tidName="TRAIT_ID_TARGET_COUCH_PITCH_ANGLE" type="float"/>
+			<Attribute description="COUCH_YAW_ANGLE" highValue="" lowValue="" name="COUCH_YAW_ANGLE" purpose="" tid="1027" tidName="TRAIT_ID_TARGET_COUCH_YAW_ANGLE" type="float"/>
+			<Attribute description="COUCH_ROLL_ANGLE" highValue="" lowValue="" name="COUCH_ROLL_ANGLE" purpose="" tid="1028" tidName="TRAIT_ID_TARGET_COUCH_ROLL_ANGLE" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_AUTO_MOTION_VERTICAL_MODE" highValue="" lowValue="" name="TRAIT_ID_COUCH_AUTO_MOTION_VERTICAL_MODE" purpose="" tid="1029" tidName="TRAIT_ID_COUCH_AUTO_MOTION_VERTICAL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_COUCH_AUTO_MOTION_YAW_MODE" highValue="" lowValue="" name="TRAIT_ID_COUCH_AUTO_MOTION_YAW_MODE" purpose="" tid="1030" tidName="TRAIT_ID_COUCH_AUTO_MOTION_YAW_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_COUCH_AUTO_MOTION_LATERNAL_MODE" highValue="" lowValue="" name="TRAIT_ID_COUCH_AUTO_MOTION_LATERNAL_MODE" purpose="" tid="1031" tidName="TRAIT_ID_COUCH_AUTO_MOTION_LATERNAL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_COUCH_AUTO_MOTION_PITCH_MODE" highValue="" lowValue="" name="TRAIT_ID_COUCH_AUTO_MOTION_PITCH_MODE" purpose="" tid="1032" tidName="TRAIT_ID_COUCH_AUTO_MOTION_PITCH_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_COUCH_AUTO_MOTION_LONGITUDINAL_MODE" highValue="" lowValue="" name="TRAIT_ID_COUCH_AUTO_MOTION_LONGITUDINAL_MODE" purpose="" tid="1033" tidName="TRAIT_ID_COUCH_AUTO_MOTION_LONGITUDINAL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_COUCH_AUTO_MOTION_ROLL_MODE" highValue="" lowValue="" name="TRAIT_ID_COUCH_AUTO_MOTION_ROLL_MODE" purpose="" tid="1034" tidName="TRAIT_ID_COUCH_AUTO_MOTION_ROLL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_COUCH_VERTICAL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_VERTICAL_MAX_LIMIT" purpose="" tid="1035" tidName="TRAIT_ID_COUCH_VERTICAL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_VERTICAL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_VERTICAL_MIN_LIMIT" purpose="" tid="1036" tidName="TRAIT_ID_COUCH_VERTICAL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_YAW_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_YAW_MAX_LIMIT" purpose="" tid="1037" tidName="TRAIT_ID_COUCH_YAW_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_YAW_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_YAW_MIN_LIMIT" purpose="" tid="1038" tidName="TRAIT_ID_COUCH_YAW_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_LATERNAL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_LATERNAL_MAX_LIMIT" purpose="" tid="1039" tidName="TRAIT_ID_COUCH_LATERNAL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_LATERNAL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_LATERNAL_MIN_LIMIT" purpose="" tid="1040" tidName="TRAIT_ID_COUCH_LATERNAL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_PITCH_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_PITCH_MAX_LIMIT" purpose="" tid="1041" tidName="TRAIT_ID_COUCH_PITCH_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_PITCH_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_PITCH_MIN_LIMIT" purpose="" tid="1042" tidName="TRAIT_ID_COUCH_PITCH_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_LONGITUDINAL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_LONGITUDINAL_MAX_LIMIT" purpose="" tid="1043" tidName="TRAIT_ID_COUCH_LONGITUDINAL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_LONGITUDINAL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_LONGITUDINAL_MIN_LIMIT" purpose="" tid="1044" tidName="TRAIT_ID_COUCH_LONGITUDINAL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_ROLL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_ROLL_MAX_LIMIT" purpose="" tid="1045" tidName="TRAIT_ID_COUCH_ROLL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_ROLL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_COUCH_ROLL_MIN_LIMIT" purpose="" tid="1046" tidName="TRAIT_ID_COUCH_ROLL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_MOTION_TYPE" highValue="" lowValue="" name="TRAIT_ID_COUCH_MOTION_TYPE" purpose="" tid="1047" tidName="TRAIT_ID_COUCH_MOTION_TYPE" type="short"/>
+			<Attribute description="TRAIT_ID_COUCH_6DOF_SPEED" highValue="" lowValue="" name="TRAIT_ID_COUCH_6DOF_SPEED" purpose="" tid="1048" tidName="TRAIT_ID_TARGET_COUCH_6DOF_SPEED" type="float"/>
+			<Attribute description="TRAIT_ID_COUCH_6DOF_ACCELERATED_SPEED" highValue="" lowValue="" name="TRAIT_ID_COUCH_6DOF_ACCELERATED_SPEED" purpose="" tid="1049" tidName="TRAIT_ID_TARGET_COUCH_6DOF_ACCELERATED_SPEED" type="float"/>
+			<Attribute description="correction data for vertical axis generated by position verrification" highValue="" lowValue="" name="TRAIT_ID_COUCH_CORRECTION_VERTICAL" purpose="" tid="1050" tidName="TRAIT_ID_COUCH_CORRECTION_VERTICAL" type="float"/>
+			<Attribute description="correction data for lateral axis generated by position verrification" highValue="" lowValue="" name="TRAIT_ID_COUCH_CORRECTION_LATERAL" purpose="" tid="1051" tidName="TRAIT_ID_COUCH_CORRECTION_LATERAL" type="float"/>
+			<Attribute description="correction data for longitudinal axis generated by position verrification" highValue="" lowValue="" name="TRAIT_ID_COUCH_CORRECTION_LONGITUDINAL" purpose="" tid="1052" tidName="TRAIT_ID_COUCH_CORRECTION_LONGITUDINAL" type="float"/>
+			<Attribute description="correction data for pitch axis generated by position verrification" highValue="" lowValue="" name="TRAIT_ID_COUCH_CORRECTION_PITCH" purpose="" tid="1053" tidName="TRAIT_ID_COUCH_CORRECTION_PITCH" type="float"/>
+			<Attribute description="correction data for yaw axis generated by position verrification" highValue="" lowValue="" name="TRAIT_ID_COUCH_CORRECTION_YAW" purpose="" tid="1054" tidName="TRAIT_ID_COUCH_CORRECTION_YAW" type="float"/>
+			<Attribute description="correction data for roll axis generated by position verrification" highValue="" lowValue="" name="TRAIT_ID_COUCH_CORRECTION_ROLL" purpose="" tid="1055" tidName="TRAIT_ID_COUCH_CORRECTION_ROLL" type="float"/>
+			<Attribute description="" highValue="" lowValue="" name="TRAIT_ID_COUCH_MOTION_REACHED_STATUS_TYPE" purpose="" tid="1056" tidName="TRAIT_ID_COUCH_MOTION_REACHED_STATUS_TYPE" type="short"/>
+			<Attribute description="" highValue="" lowValue="" name="TRAIT_ID_COUCH_VERIFY_TARGET_VALUE_RESULT" purpose="" tid="1057" tidName="TRAIT_ID_COUCH_VERIFY_TARGET_VALUE_RESULT" type="boolean"/>
+			<Attribute description="" highValue="" lowValue="" name="TRAIT_ID_COUCH_SW_VERSION" purpose="" tid="1058" tidName="TRAIT_ID_COUCH_SW_VERSION" type="string"/>
+			<Attribute description="" highValue="" lowValue="" name="TRAIT_ID_COUCH_HW_VERSION" purpose="" tid="1059" tidName="TRAIT_ID_COUCH_HW_VERSION" type="string"/>
+			<Attribute description="" highValue="" lowValue="" name="TRAIT_ID_COUCH_FIRMWARE_VERSION" purpose="" tid="1060" tidName="TRAIT_ID_COUCH_FIRMWARE_VERSION" type="string"/>
+			<Attribute description="" highValue="" lowValue="" name="TRAIT_ID_COUCH_6DOF_DECELERATED_SPEED" purpose="" tid="1061" tidName="TRAIT_ID_TARGET_COUCH_6DOF_DECELERATED_SPEED" type="float"/>
+		</Group>
+		<Group name="Clinical">
+			<Attribute description="Spot info x value" highValue="" lowValue="" name="PLAN_SPOT_X" purpose="Prescription" tid="10000" tidName="TRAIT_ID_PLAN_SPOT_X" type="float"/>
+			<Attribute description="Spot info y value" highValue="" lowValue="" name="PLAN_SPOT_Y" purpose="Prescription" tid="10001" tidName="TRAIT_ID_PLAN_SPOT_Y" type="float"/>
+			<Attribute description="x value of spot size" highValue="" lowValue="" name="PLAN_SPOT_X_SIZE" purpose="Prescription" tid="10002" tidName="TRAIT_ID_PLAN_SPOT_X_SIZE" type="float"/>
+			<Attribute description="y value of spot size" highValue="" lowValue="" name="PLAN_SPOT_Y_SIZE" purpose="Prescription" tid="10003" tidName="TRAIT_ID_PLAN_SPOT_Y_SIZE" type="float"/>
+			<Attribute description="Spot info mu value" highValue="" lowValue="" name="PLAN_SPOT_MU" purpose="Prescription" tid="10004" tidName="TRAIT_ID_PLAN_SPOT_MU" type="float"/>
+			<Attribute description="Layer Index" highValue="" lowValue="" name="PLAN_LAYER_INDEX" purpose="Prescription" tid="10005" tidName="TRAIT_ID_PLAN_LAYER_INDEX" type="long"/>
+			<Attribute description="Layer energy" highValue="" lowValue="" name="PLAN_LAYER_ENERGY" purpose="Prescription" tid="10006" tidName="TRAIT_ID_PLAN_LAYER_ENERGY" type="float"/>
+			<Attribute description="Layer dose rate" highValue="" lowValue="" name="PLAN_LAYER_DOSE_RATE" purpose="Prescription" tid="10007" tidName="TRAIT_ID_PLAN_LAYER_DOSE_RATE" type="float"/>
+			<Attribute description="Layer meterset weight" highValue="" lowValue="" name="PLAN_LAYER_METERSET_WEIGHT" purpose="Prescription" tid="10008" tidName="TRAIT_ID_PLAN_LAYER_METERSET_WEIGHT" type="float"/>
+			<Attribute description="Number of paitings of layer" highValue="" lowValue="" name="PLAN_LAYER_NUMBER_OF_PAITINGS" purpose="Prescription" tid="10009" tidName="TRAIT_ID_PLAN_LAYER_NUMBER_OF_PAITINGS" type="long"/>
+			<Attribute description="Nominal Beam Energy of layer" highValue="" lowValue="" name="PLAN_LAYER_NOMINAL_BEAM_ENERGY" purpose="Prescription" tid="10010" tidName="TRAIT_ID_PLAN_LAYER_NOMINAL_BEAM_ENERGY" type="float"/>
+			<Attribute description="Number of scan spots of layer" highValue="" lowValue="" name="PLAN_LAYER_NUMBER_OF_SCAN_SPOTS" purpose="Prescription" tid="10011" tidName="TRAIT_ID_PLAN_LAYER_NUMBER_OF_SCAN_SPOTS" type="long"/>
+			<Attribute description="Accessory ID" highValue="" lowValue="" name="PLAN_ACCESSORY_ID" purpose="Prescription" tid="10012" tidName="TRAIT_ID_PLAN_ACCESSORY_ID" type="string"/>
+			<Attribute description="Accessory Name" highValue="" lowValue="" name="PLAN_ACCESSORY_NAME" purpose="Prescription" tid="10013" tidName="TRAIT_ID_PLAN_ACCESSORY_NAME" type="string"/>
+			<Attribute description="Accessory Index" highValue="" lowValue="" name="PLAN_ACCESSORY_INDEX" purpose="Prescription" tid="10014" tidName="TRAIT_ID_PLAN_ACCESSORY_INDEX" type="long"/>
+			<Attribute description="Field ID" highValue="" lowValue="" name="PLAN_FIELD_ID" purpose="Prescription" tid="10015" tidName="TRAIT_ID_PLAN_FIELD_ID" type="long"/>
+			<Attribute description="Field Name" highValue="" lowValue="" name="PLAN_FIELD_NAME" purpose="Prescription" tid="10016" tidName="TRAIT_ID_PLAN_FIELD_NAME" type="string"/>
+			<Attribute description="Field Delivery type" highValue="" lowValue="" name="PLAN_FIELD_DELIVERY_TYPE" purpose="Prescription" tid="10017" tidName="TRAIT_ID_PLAN_FIELD_DELIVERY_TYPE" type="string"/>
+			<Attribute description="Field Scan Mode" highValue="" lowValue="" name="PLAN_FIELD_SCAN_MODE" purpose="Prescription" tid="10018" tidName="TRAIT_ID_PLAN_FIELD_SCAN_MODE" type="string"/>
+			<Attribute description="Field Meterset Weight" highValue="" lowValue="" name="PLAN_FIELD_METERSET_WEIGHT" purpose="Prescription" tid="10019" tidName="TRAIT_ID_PLAN_FIELD_METERSET_WEIGHT" type="float"/>
+			<Attribute description="Field total dose to be delivered" highValue="" lowValue="" name="TRAIT_ID_PLAN_FIELD_TOTAL_DOSE_SPECIFIED" purpose="Prescription" tid="10020" tidName="TRAIT_ID_PLAN_FIELD_TOTAL_DOSE_SPECIFIED" type="float"/>
+			<Attribute description="Field Reference Point" highValue="" lowValue="" name="PLAN_FIELD_REFERENCE_POINT" purpose="Prescription" tid="10021" tidName="TRAIT_ID_PLAN_FIELD_REFERENCE_POINT" type="long"/>
+			<Attribute description="Field Vertical poisition" highValue="" lowValue="" name="PLAN_FIELD_VERTICAL_POSITION" purpose="Prescription" tid="10022" tidName="TRAIT_ID_PLAN_FIELD_VERTICAL_POSITION" type="float"/>
+			<Attribute description="Field lateral position" highValue="" lowValue="" name="PLAN_FIELD_LATERAL_POSITION" purpose="Prescription" tid="10023" tidName="TRAIT_ID_PLAN_FIELD_LATERAL_POSITION" type="float"/>
+			<Attribute description="Field longitudinal position" highValue="" lowValue="" name="PLAN_FIELD_LONGITUDINAL_POSITION" purpose="Prescription" tid="10024" tidName="TRAIT_ID_PLAN_FIELD_LONGITUDINAL_POSITION" type="float"/>
+			<Attribute description="Field gantry angle" highValue="" lowValue="" name="PLAN_FIELD_GANTRY_ANGLE" purpose="Prescription" tid="10025" tidName="TRAIT_ID_PLAN_FIELD_GANTRY_ANGLE" type="float"/>
+			<Attribute description="Field rotate direction (enum)" highValue="" lowValue="" name="PLAN_FIELD_ROTATE_DIRECTION" purpose="Prescription" tid="10026" tidName="TRAIT_ID_PLAN_FIELD_ROTATE_DIRECTION" type="short"/>
+			<Attribute description="Field Patient patient vertical position" highValue="" lowValue="" name="PLAN_FIELD_PATIENT_VERTICAL_POSITION" purpose="Prescription" tid="10027" tidName="TRAIT_ID_PLAN_FIELD_PATIENT_VERTICAL_POSITION" type="float"/>
+			<Attribute description="Field Patient patient longitudinal position" highValue="" lowValue="" name="PLAN_FIELD_PATIENT_LONGITUDINAL_POSITION" purpose="Prescription" tid="10028" tidName="TRAIT_ID_PLAN_FIELD_PATIENT_LONGITUDINAL_POSITION" type="float"/>
+			<Attribute description="Field Patient patient lateral position" highValue="" lowValue="" name="PLAN_FIELD_PATIENT_LATERAL_POSITION" purpose="Prescription" tid="10029" tidName="TRAIT_ID_PLAN_FIELD_PATIENT_LATERAL_POSITION" type="float"/>
+			<Attribute description="Field Patient patient yaw angle" highValue="" lowValue="" name="PLAN_FIELD_PATIENT_YAW_ANGLE" purpose="Prescription" tid="10030" tidName="TRAIT_ID_PLAN_FIELD_PATIENT_YAW_ANGLE" type="float"/>
+			<Attribute description="Field Patient patient pitch angle" highValue="" lowValue="" name="PLAN_FIELD_PATIENT_PITCH_ANGLE" purpose="Prescription" tid="10031" tidName="TRAIT_ID_PLAN_FIELD_PATIENT_PITCH_ANGLE" type="float"/>
+			<Attribute description="Field Patient patient roll angle" highValue="" lowValue="" name="PLAN_FIELD_PATIENT_ROLL_ANGLE" purpose="Prescription" tid="10032" tidName="TRAIT_ID_PLAN_FIELD_PATIENT_ROLL_ANGLE" type="float"/>
+			<Attribute description="Field snout id" highValue="" lowValue="" name="PLAN_FIELD_SNOUT_ID" purpose="Prescription" tid="10033" tidName="TRAIT_ID_PLAN_FIELD_SNOUT_ID" type="string"/>
+			<Attribute description="Field Snout snout ext position" highValue="" lowValue="" name="PLAN_FIELD_SNOUT_EXT_POSITION" purpose="Prescription" tid="10034" tidName="TRAIT_ID_PLAN_FIELD_SNOUT_EXT_POSITION" type="float"/>
+			<Attribute description="Number of layers of the field" highValue="" lowValue="" name="PLAN_FIELD_NUMBER_OF_LAYERS" purpose="Prescription" tid="10035" tidName="TRAIT_ID_PLAN_FIELD_NUMBER_OF_LAYERS" type="long"/>
+			<Attribute description="Total Number of scan spots of all layers of this field" highValue="" lowValue="" name="PLAN_FIELD_TOTAL_NUMBER_OF_SCAN_SPOTS" purpose="Prescription" tid="10036" tidName="TRAIT_ID_PLAN_FIELD_TOTAL_NUMBER_OF_SCAN_SPOTS" type="long"/>
+			<Attribute description="Total Number of delivered scan spots of all layers of this field" highValue="" lowValue="" name="PLAN_FIELD_TOTAL_DELIVERED_SCAN_SPOTS" purpose="Prescription" tid="10037" tidName="TRAIT_ID_PLAN_FIELD_TOTAL_DELIVERED_SCAN_SPOTS" type="long"/>
+			<Attribute description="Total Number of remaining scan spots of all layers of this field" highValue="" lowValue="" name="PLAN_FIELD_TOTAL_REMAINING_SCAN_SPOTS" purpose="Prescription" tid="10038" tidName="TRAIT_ID_PLAN_FIELD_TOTAL_REMAINING_SCAN_SPOTS" type="long"/>
+			<Attribute description="Total Number of fractions planed for this field" highValue="" lowValue="" name="PLAN_FIELD_TOTAL_NUMBER_OF_FRACTIONS" purpose="Prescription" tid="10039" tidName="TRAIT_ID_PLAN_FIELD_TOTAL_NUMBER_OF_FRACTIONS" type="long"/>
+			<Attribute description="Current fraction number " highValue="" lowValue="" name="PLAN_FIELD_CURR_FRACTION_NUMBER" purpose="Prescription" tid="10040" tidName="TRAIT_ID_PLAN_FIELD_CURR_FRACTION_NUMBER" type="long"/>
+			<Attribute description="Plan id" highValue="" lowValue="" name="PLAN_ID" purpose="Prescription" tid="10041" tidName="TRAIT_ID_PLAN_ID" type="string"/>
+			<Attribute description="Plan reversion" highValue="" lowValue="" name="PLAN_REVERSION" purpose="Prescription" tid="10042" tidName="TRAIT_ID_PLAN_REVERSION" type="string"/>
+			<Attribute description="Plan name" highValue="" lowValue="" name="PLAN_NAME" purpose="Prescription" tid="10043" tidName="TRAIT_ID_PLAN_NAME" type="string"/>
+			<Attribute description="Plan description" highValue="" lowValue="" name="PLAN_DESCRIPTION" purpose="Prescription" tid="10044" tidName="TRAIT_ID_PLAN_DESCRIPTION" type="string"/>
+			<Attribute description="Plan accepted" highValue="" lowValue="" name="PLAN_ACCEPTED" purpose="Prescription" tid="10045" tidName="TRAIT_ID_PLAN_ACCEPTED" type="bool"/>
+			<Attribute description="Plan total dose to be delivered " highValue="" lowValue="" name="PLAN_TOTAL_DOSE_SPECIFIED" purpose="Prescription" tid="10046" tidName="TRAIT_ID_PLAN_TOTAL_DOSE_SPECIFIED" type="float"/>
+			<Attribute description="Plan target volume(GTV CTV )" highValue="" lowValue="" name="PLAN_TARGET_VOLUME" purpose="Prescription" tid="10047" tidName="TRAIT_ID_PLAN_TARGET_VOLUME" type="float"/>
+			<Attribute description="Plan total dose delivered unital today " highValue="" lowValue="" name="PLAN_TOTAL_DOSE_DELIVERED" purpose="Prescription" tid="10048" tidName="TRAIT_ID_PLAN_TOTAL_DOSE_DELIVERED" type="float"/>
+			<Attribute description="Course ID" highValue="" lowValue="" name="PLAN_COURSE_ID" purpose="Prescription" tid="10049" tidName="TRAIT_ID_PLAN_COURSE_ID" type="string"/>
+			<Attribute description="Course name" highValue="" lowValue="" name="PLAN_COURSE_NAME" purpose="Prescription" tid="10050" tidName="TRAIT_ID_PLAN_COURSE_NAME" type="string"/>
+			<Attribute description="Course description" highValue="" lowValue="" name="PLAN_COURSE_DESCRIPTION" purpose="Prescription" tid="10051" tidName="TRAIT_ID_PLAN_COURSE_DESCRIPTION" type="string"/>
+			<Attribute description="Load plan type (enum)" highValue="" lowValue="" name="LOAD_PLAN_TYPE" purpose="Prescription" tid="10052" tidName="TRAIT_ID_LOAD_PLAN_TYPE" type="short"/>
+			<Attribute description="Dicom file of treatment plan" highValue="" lowValue="" name="PLAN_DICOM_FILE" purpose="Prescription" tid="10053" tidName="TRAIT_ID_PLAN_DICOM_FILE" type="string"/>
+			<Attribute description="Patient id" highValue="" lowValue="" name="PATIENT_ID" purpose="Prescription" tid="10054" tidName="TRAIT_ID_PATIENT_ID" type="string"/>
+			<Attribute description="Patient name" highValue="" lowValue="" name="PATIENT_NAME" purpose="Prescription" tid="10055" tidName="TRAIT_ID_PATIENT_NAME" type="string"/>
+			<Attribute description="Patient family name" highValue="" lowValue="" name="PATIENT_FAMILY_NAME" purpose="Prescription" tid="10056" tidName="TRAIT_ID_PATIENT_FAMILY_NAME" type="string"/>
+			<Attribute description="Patient first name" highValue="" lowValue="" name="PATIENT_FIRST_NAME" purpose="Prescription" tid="10057" tidName="TRAIT_ID_PATIENT_FIRST_NAME" type="string"/>
+			<Attribute description="Patient gender" highValue="" lowValue="" name="PATIENT_GENDER" purpose="Prescription" tid="10058" tidName="TRAIT_ID_PATIENT_GENDER" type="string"/>
+			<Attribute description="Patient birthday" highValue="" lowValue="" name="PATIENT_BIRTHDAY" purpose="Prescription" tid="10059" tidName="TRAIT_ID_PATIENT_BIRTHDAY" type="string"/>
+			<Attribute description="Patient age" highValue="" lowValue="" name="PATIENT_AGE" purpose="Prescription" tid="10060" tidName="TRAIT_ID_PATIENT_AGE" type="string"/>
+			<Attribute description="Patient photo" highValue="" lowValue="" name="PATIENT_PHOTO" purpose="Prescription" tid="10061" tidName="TRAIT_ID_PATIENT_PHOTO" type="string"/>
+			<Attribute description="Patient diagnosis" highValue="" lowValue="" name="PATIENT_DIAGNOSIS" purpose="Prescription" tid="10062" tidName="TRAIT_ID_PATIENT_DIAGNOSIS" type="string"/>
+			<Attribute description="Patient Position" highValue="" lowValue="" name="PATIENT_POSITION" purpose="Prescription" tid="10063" tidName="TRAIT_ID_PATIENT_POSITION" type="string"/>
+			<Attribute description="Patient treatment schedule date" highValue="" lowValue="" name="SCHEDULE_DATE" purpose="Schedule" tid="10064" tidName="TRAIT_ID_SCHEDULE_DATE" type="string"/>
+			<Attribute description="Patient treatment schedule time" highValue="" lowValue="" name="SCHEDULE_TIME" purpose="Schedule" tid="10065" tidName="TRAIT_ID_SCHEDULE_TIME" type="string"/>
+			<Attribute description="Patient checking date" highValue="" lowValue="" name="SCHEDULE_CHECKING_DATE" purpose="Schedule" tid="10066" tidName="TRAIT_ID_SCHEDULE_CHECKING_DATE" type="string"/>
+			<Attribute description="Patient checking time" highValue="" lowValue="" name="SCHEDULE_CHECKING_TIME" purpose="Schedule" tid="10067" tidName="TRAIT_ID_SCHEDULE_CHECKING_TIME" type="string"/>
+			<Attribute description="activity type for schedule" highValue="" lowValue="" name="SCHEDULE_ACTIVITY_TYPE" purpose="Schedule" tid="10068" tidName="TRAIT_ID_SCHEDULE_ACTIVITY_TYPE" type="short"/>
+			<Attribute description="activity state for schedule" highValue="" lowValue="" name="SCHEDULE_ACTIVITY_STATE" purpose="Schedule" tid="10069" tidName="TRAIT_ID_SCHEDULE_ACTIVITY_STATE" type="short"/>
+			<Attribute description="appointment notes" highValue="" lowValue="" name="SCHEDULE_APPOINTMENT_NOTE" purpose="Schedule" tid="10070" tidName="TRAIT_ID_SCHEDULE_APPOINTMENT_NOTE" type="string"/>
+			<Attribute description="number of total schedules in list" highValue="" lowValue="" name="SCHEDULE_LIST_TOTAL_NUMBER" purpose="Schedule" tid="10071" tidName="TRAIT_ID_SCHEDULE_LIST_TOTAL_NUMBER" type="short"/>
+			<Attribute description="number of completed schedules in list" highValue="" lowValue="" name="SCHEDULE_LIST_COMPLETED_NUMBER" purpose="Schedule" tid="10072" tidName="TRAIT_ID_SCHEDULE_LIST_COMPLETED_NUMBER" type="short"/>
+			<Attribute description="number of remaining schedules in list" highValue="" lowValue="" name="SCHEDULE_LIST_REMAINING_NUMBER" purpose="Schedule" tid="10073" tidName="TRAIT_ID_SCHEDULE_LIST_REMAINING_NUMBER" type="short"/>
+			<Attribute description="Study instance uid of plan" highValue="" lowValue="" name="PLAN_STUDY_INSTNACE_UID" purpose="Prescription" tid="10074" tidName="TRAIT_ID_PLAN_STUDY_INSTANCE_UID" type="string"/>
+			<Attribute description="Current process percent of %100" highValue="" lowValue="" name="CURRENT_BEAM_DOSE_RATIO" purpose="Field" tid="10075" tidName="TRAIT_ID_CURRENT_BEAM_DOSE_RATIO" type="float"/>
+			<Attribute description="indicates if this field is a partial treatment" highValue="" lowValue="" name="FIELD_IS_PARTIAL" purpose="Field" tid="10076" tidName="TRAIT_ID_FIELD_IS_PARTIAL" type="boolean"/>
+			<Attribute description="number of filed currently selected" highValue="" lowValue="" name="FIELD_CURRENT_SELECTED_NUMBER" purpose="Field" tid="10077" tidName="TRAIT_ID_FIELD_CURRENT_SELECTED_NUMBER" type="long"/>
+			<Attribute description="Totoal dose delivered current field" highValue="" lowValue="" name="FIELD_TOTAL_DOSE_DELIVERED" purpose="Field" tid="10078" tidName="TRAIT_ID_FIELD_TOTAL_DOSE_DELIVERED" type="float"/>
+			<Attribute description="Primary totoal dose delivered measured by io champ 1 for current field" highValue="" lowValue="" name="FIELD_TOTAL_DOSE_DELIVERED_PRIMARY" purpose="Field" tid="10079" tidName="TRAIT_ID_FIELD_TOTAL_DOSE_DELIVERED_PRIMARY" type="float"/>
+			<Attribute description="Secondary totoal dose delivered measured by ion champ 2 for current layer" highValue="" lowValue="" name="FIELD_DELIVERED_DOSE_SECONDARY" purpose="Field" tid="10080" tidName="TRAIT_ID_FIELD_TOTAL_DOSE_DELIVERED_SECONDARY " type="float"/>
+			<Attribute description="Totoal dose remaining for current field" highValue="" lowValue="" name="FIELD_TOTAL_DOSE_REMAINING" purpose="Field" tid="10081" tidName="TRAIT_ID_FIELD_TOTAL_DOSE_REMAINING" type="float"/>
+			<Attribute description="Estimate time to deliever current field in second" highValue="" lowValue="" name="FIELD_ESTIMATE_TIME_SEC " purpose="Field" tid="10082" tidName="TRAIT_ID_FIELD_ESTIMATE_TIME_SEC " type="long"/>
+			<Attribute description="Number of layer delivering for current layer" highValue="" lowValue="" name="FIELD_CURRENT_DELIVERING_LAYER_NUMBER " purpose="Field" tid="10083" tidName="TRAIT_ID_FIELD_CURRENT_DELIVERING_LAYER_NUMBER " type="long"/>
+			<Attribute description="Index of layer delivered last time for current layer" highValue="" lowValue="" name="FIELD_LAST_DELIVERED_LAYER_NUMBER " purpose="Field" tid="10084" tidName="TRAIT_ID_FIELD_LAST_DELIVERED_LAYER_NUMBER " type="long"/>
+			<Attribute description="current index of sopt " highValue="" lowValue="" name="SPOT_CURRENT_NUMBER" purpose="Facility" tid="10085" tidName="TRAIT_ID_SPOT_CURRENT_NUMBER" type="long"/>
+			<Attribute description="index of sopt delivered last time " highValue="" lowValue="" name="SPOT_LAST_DELIVERED_NUMBER" purpose="Facility" tid="10086" tidName="TRAIT_ID_SPOT_LAST_DELIVERED_NUMBER" type="long"/>
+			<Attribute description="Actual spot position when delivering along x axis" highValue="" lowValue="" name="SPOT_ACTUAL_POS_X" purpose="Facility" tid="10087" tidName="TRAIT_ID_SPOT_ACTUAL_POS_X" type="float"/>
+			<Attribute description="Actual spot position when delivering along y axis" highValue="" lowValue="" name="SPOT_ACTUAL_POS_Y" purpose="Facility" tid="10088" tidName="TRAIT_ID_SPOT_ACTUAL_POS_Y" type="float"/>
+			<Attribute description="Actual spot size when delivering along x axis" highValue="" lowValue="" name="SPOT_ACTUAL_SIZE_X" purpose="Facility" tid="10089" tidName="TRAIT_ID_SPOT_ACTUAL_SIZE_X" type="float"/>
+			<Attribute description="Actual spot size when delivering along y axis" highValue="" lowValue="" name="SPOT_ACTUAL_SIZE_Y" purpose="Facility" tid="10090" tidName="TRAIT_ID_SPOT_ACTUAL_SIZE_Y" type="float"/>
+			<Attribute description="Actual dose delivered for current spot" highValue="" lowValue="" name="SPOT_ACTUAL_DOSE_DELIVERED" purpose="Facility" tid="10091" tidName="TRAIT_ID_SPOT_ACTUAL_DOSE_DELIVERED" type="float"/>
+			<Attribute description="plan chair vertical position" highValue="" lowValue="" name="CHAIR_VERTICAL_POS" purpose="Prescription" tid="10092" tidName="TRAIT_ID_PLAN_CHAIR_VERTICAL_POS" type="float"/>
+			<Attribute description="plan chair lateral position" highValue="" lowValue="" name="CHAIR_LATERAL_POS" purpose="Prescription" tid="10093" tidName="TRAIT_ID_PLAN_CHAIR_LATERAL_POS" type="float"/>
+			<Attribute description="plan chair longitudinal position" highValue="" lowValue="" name="CHAIR_LONGITUDINAL_POS" purpose="Prescription" tid="10094" tidName="TRAIT_ID_PLAN_CHAIR_LONGITUDINAL_POS" type="float"/>
+			<Attribute description="plan chair pitch angle" highValue="" lowValue="" name="CHAIR_PITCH_ANGLE" purpose="Prescription" tid="10095" tidName="TRAIT_ID_PLAN_CHAIR_PITCH_ANGLE" type="float"/>
+			<Attribute description="plan chair yaw angle" highValue="" lowValue="" name="CHAIR_YAW_ANGLE" purpose="Prescription" tid="10096" tidName="TRAIT_ID_PLAN_CHAIR_YAW_ANGLE" type="float"/>
+			<Attribute description="plan chair roll angle" highValue="" lowValue="" name="CHAIR_ROLL_ANGLE" purpose="Prescription" tid="10097" tidName="TRAIT_ID_PLAN_CHAIR_ROLL_ANGLE" type="float"/>
+			<Attribute description="plan chair liftup position" highValue="" lowValue="" name="CHAIR_LIFTUP_POS" purpose="Prescription" tid="10098" tidName="TRAIT_ID_PLAN_CHAIR_LIFTUP_POS" type="float"/>
+			<Attribute description="plan chair rotate angle" highValue="" lowValue="" name="CHAIR_ROTATE_ANGLE" purpose="Prescription" tid="10099" tidName="TRAIT_ID_PLAN_CHAIR_ROTATE_ANGLE" type="float"/>
+			<Attribute description="Full name of Referring physician's name" highValue="" lowValue="" name="REFERRING_PHYSICIANS_NAME" purpose="Prescription" tid="10100" tidName="TRAIT_ID_PLAN_REFERRING_PHYSICIANS_NAME" type="string"/>
+			<Attribute description="First name of Referring physician's name" highValue="" lowValue="" name="REFERRING_PHYSICIANS_NAME_FIRST_NAME" purpose="Prescription" tid="10101" tidName="TRAIT_ID_PLAN_REFERRING_PHYSICIANS_NAME_FIRST_NAME" type="string"/>
+			<Attribute description="Last name of Referring physician's name" highValue="" lowValue="" name="REFERRING_PHYSICIANS_NAME_LAST_NAME" purpose="Prescription" tid="10102" tidName="TRAIT_ID_PLAN_REFERRING_PHYSICIANS_NAME_LAST_NAME" type="string"/>
+			<Attribute description="Full name of Physicians of record" highValue="" lowValue="" name="PHYSICIANS_OF_RECORD" purpose="Prescription" tid="10103" tidName="TRAIT_ID_PLAN_PHYSICIANS_OF_RECORD" type="string"/>
+			<Attribute description="First name of Physicians of record" highValue="" lowValue="" name="PHYSICIANS_OF_RECORD_FIRST_NAME" purpose="Prescription" tid="10104" tidName="TRAIT_ID_PLAN_PHYSICIANS_OF_RECORD_FIRST_NAME" type="string"/>
+			<Attribute description="Last name of Physicians of record" highValue="" lowValue="" name="PHYSICIANS_OF_RECORD_LAST_NAME" purpose="Prescription" tid="10105" tidName="TRAIT_ID_PLAN_PHYSICIANS_OF_RECORD_LAST_NAME" type="string"/>
+		</Group>
+		<Group name="System">
+			<Attribute description="message id" highValue="" lowValue="" name="TRAIT_ID_SYS_MESSAGE_ID" purpose="Facility" tid="9000" tidName="TRAIT_ID_SYS_MESSAGE_ID" type="long"/>
+			<Attribute description="system software component id" highValue="" lowValue="" name="TRAIT_ID_SYS_SW_COMPONENT" purpose="Facility" tid="9001" tidName="TRAIT_ID_SYS_SW_COMPONENT" type="short"/>
+			<Attribute description="indicate if interlock is cleared" highValue="" lowValue="" name="TRAIT_ID_SYS_INTERLOCK_IS_CLEARED" purpose="Facility" tid="9002" tidName="TRAIT_ID_SYS_INTERLOCK_IS_CLEARED" type="boolean"/>
+			<Attribute description="indicate that if interlock with override present" highValue="" lowValue="" name="TRAIT_ID_SYS_INTERLOCK_OVERRIDE_PRESENT" purpose="Facility" tid="9003" tidName="TRAIT_ID_SYS_INTERLOCK_OVERRIDE_PRESENT" type="boolean"/>
+			<Attribute description="indicate if interlock is acknowedged by user" highValue="" lowValue="" name="TRAIT_ID_SYS_INTERLOCK_IS_ACKED" purpose="Facility" tid="9004" tidName="TRAIT_ID_SYS_INTERLOCK_IS_ACKED" type="boolean"/>
+			<Attribute description="id of inerlock group" highValue="" lowValue="" name="TRAIT_ID_SYS_INTERLOCK_GROUP_ID" purpose="Facility" tid="9005" tidName="TRAIT_ID_SYS_INTERLOCK_CATEGORY_ID" type="short"/>
+			<Attribute description="name of inerlock group" highValue="" lowValue="" name="TRAIT_ID_SYS_INTERLOCK_GROUP_NAME" purpose="Facility" tid="9006" tidName="TRAIT_ID_SYS_INTERLOCK_CATEGORY_NAME" type="string"/>
+			<Attribute description="indicate if acknowedge is required" highValue="" lowValue="" name="TRAIT_ID_SYS_INTERLOCK_TABLE_NEED_ACK" purpose="Facility" tid="9007" tidName="TRAIT_ID_SYS_INTERLOCK_TABLE_NEED_ACK" type="boolean"/>
+			<Attribute description="indicate if override is allowed" highValue="" lowValue="" name="TRAIT_ID_SYS_INTERLOCK_ALLOW_OVERRIDE" purpose="Facility" tid="9008" tidName="TRAIT_ID_SYS_INTERLOCK_ALLOW_OVERRIDE" type="boolean"/>
+			<Attribute description="major version" highValue="" lowValue="" name="MAJOR_VERSION" purpose="Facility" tid="9009" tidName="TRAIT_ID_SW_MAJOR_VERSION" type="short"/>
+			<Attribute description="minor version" highValue="" lowValue="" name="MINOR_VERSION" purpose="Facility" tid="9010" tidName="TRAIT_ID_SW_MINOR_VERSION" type="short"/>
+			<Attribute description="revision" highValue="" lowValue="" name="REVISION" purpose="Facility" tid="9011" tidName="TRAIT_ID_SW_REVISION_VERSION" type="short"/>
+			<Attribute description="build" highValue="" lowValue="" name="BUILD" purpose="Facility" tid="9012" tidName="TRAIT_ID_SW_BUILD_VERSION" type="short"/>
+			<Attribute description="string combined with some of major, minor, revision and build" highValue="" lowValue="" name="software version" purpose="Facility" tid="9013" tidName="TRAIT_ID_SW_VERSION" type="string"/>
+		</Group>
+		<Group name="Chair">
+			<Attribute description="TRAIT_ID_CHAIR_ISO_ROTATE_TARGET_ANGLE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_ISO_ROTATE_TARGET_ANGLE" purpose="" tid="500" tidName="TRAIT_ID_TARGET_CHAIR_ISO_ROTATE_ANGLE" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_ISO_ROTATE_ACCELERATED_SPEED" highValue="" lowValue="" name="TRAIT_ID_CHAIR_ISO_ROTATE_ACCELERATED_SPEED" purpose="" tid="501" tidName="TRAIT_ID_TARGET_CHAIR_ISO_ROTATE_ACCELERATED_SPEED" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_ISO_ROTATE_SPEED" highValue="" lowValue="" name="TRAIT_ID_CHAIR_ISO_ROTATE_SPEED" purpose="" tid="502" tidName="TRAIT_ID_TARGET_CHAIR_ISO_ROTATE_SPEED" type="float"/>
+			<Attribute description="CHAIR_RUNTIME_FOR_MOTOR" highValue="" lowValue="" name="CHAIR_RUNTIME_FOR_MOTOR" purpose="" tid="503" tidName="TRAIT_ID_CHAIR_RUNTIME_FOR_MOTOR" type="long"/>
+			<Attribute description="CHAIR_RUNTIME_FOR_CHAIR" highValue="" lowValue="" name="CHAIR_RUNTIME_FOR_CHAIR" purpose="" tid="504" tidName="TRAIT_ID_CHAIR_RUNTIME_FOR_CHAIR" type="long"/>
+			<Attribute description="CHAIR_MOTION_VERTICAL_TOLERANCE" highValue="" lowValue="" name="CHAIR_MOTION_VERTICAL_TOLERANCE" purpose="" tid="505" tidName="TRAIT_ID_CHAIR_MOTION_VERTICAL_TOLERANCE" type="short"/>
+			<Attribute description="CHAIR_MOTION_LATERAL_TOLERANCE" highValue="" lowValue="" name="CHAIR_MOTION_LATERAL_TOLERANCE" purpose="" tid="506" tidName="TRAIT_ID_CHAIR_MOTION_LATERAL_TOLERANCE" type="short"/>
+			<Attribute description="CHAIR_MOTION_LONGITUDINAL_TOLERANCE" highValue="" lowValue="" name="CHAIR_MOTION_LONGITUDINAL_TOLERANCE" purpose="" tid="507" tidName="TRAIT_ID_CHAIR_MOTION_LONGITUDINAL_TOLERANCE" type="short"/>
+			<Attribute description="CHAIR_ERROR_CODE" highValue="" lowValue="" name="CHAIR_ERROR_CODE" purpose="" tid="508" tidName="TRAIT_ID_CHAIR_ERROR_CODE" type="short"/>
+			<Attribute description="CHAIR_ERROR_TIMES" highValue="" lowValue="" name="CHAIR_ERROR_TIMES" purpose="" tid="509" tidName="TRAIT_ID_CHAIR_ERROR_TIMES" type="short"/>
+			<Attribute description="CHAIR_VERSION_TEXT" highValue="" lowValue="" name="CHAIR_VERSION_TEXT" purpose="" tid="510" tidName="TRAIT_ID_CHAIR_VERSION_TEXT" type="string"/>
+			<Attribute description="CHAIR_VERSION_MAJOR" highValue="" lowValue="" name="CHAIR_VERSION_MAJOR" purpose="" tid="511" tidName="TRAIT_ID_CHAIR_VERSION_MAJOR" type="string"/>
+			<Attribute description="CHAIR_VERSION_MINOR" highValue="" lowValue="" name="CHAIR_VERSION_MINOR" purpose="" tid="512" tidName="TRAIT_ID_CHAIR_VERSION_MINOR" type="string"/>
+			<Attribute description="CHAIR_VERSION_PATCH" highValue="" lowValue="" name="CHAIR_VERSION_PATCH" purpose="" tid="513" tidName="TRAIT_ID_CHAIR_VERSION_PATCH" type="string"/>
+			<Attribute description="CHAIR_STATUS" highValue="" lowValue="" name="CHAIR_STATUS" purpose="" tid="514" tidName="TRAIT_ID_CHAIR_STATUS" type="short"/>
+			<Attribute description="CHAIR_ERROR_TEXT" highValue="" lowValue="" name="CHAIR_ERROR_TEXT" purpose="" tid="515" tidName="TRAIT_ID_CHAIR_ERROR_TEXT" type="string"/>
+			<Attribute description="CHAIR_ERROR_LEVEL" highValue="" lowValue="" name="CHAIR_ERROR_LEVEL" purpose="" tid="516" tidName="TRAIT_ID_CHAIR_ERROR_LEVEL" type="short"/>
+			<Attribute description="CHAIR_MOTION_VERTICAL_ANGLE_TOLERANCE" highValue="" lowValue="" name="CHAIR_MOTION_VERTICAL_ANGLE_TOLERANCE" purpose="" tid="517" tidName="TRAIT_ID_CHAIR_MOTION_VERTICAL_ANGLE_TOLERANCE" type="short"/>
+			<Attribute description="CHAIR_MOTION_LATERAL_ANGLE_TOLERANCE" highValue="" lowValue="" name="CHAIR_MOTION_LATERAL_ANGLE_TOLERANCE" purpose="" tid="518" tidName="TRAIT_ID_CHAIR_MOTION_LATERAL_ANGLE_TOLERANCE" type="short"/>
+			<Attribute description="CHAIR_MOTION_LONGITUDINAL_ANGLE_TOLERANCE" highValue="" lowValue="" name="CHAIR_MOTION_LONGITUDINAL_ANGLE_TOLERANCE" purpose="" tid="519" tidName="TRAIT_ID_CHAIR_MOTION_LONGITUDINAL_ANGLE_TOLERANCE" type="short"/>
+			<Attribute description="CHAIR_VERTICAL_POS" highValue="" lowValue="" name="CHAIR_VERTICAL_POS" purpose="" tid="520" tidName="TRAIT_ID_ACTUAL_CHAIR_VERTICAL_POS" type="float"/>
+			<Attribute description="CHAIR_LATERAL_POS" highValue="" lowValue="" name="CHAIR_LATERAL_POS" purpose="" tid="521" tidName="TRAIT_ID_ACTUAL_CHAIR_LATERAL_POS" type="float"/>
+			<Attribute description="CHAIR_LONGITUDINAL_POS" highValue="" lowValue="" name="CHAIR_LONGITUDINAL_POS" purpose="" tid="522" tidName="TRAIT_ID_ACTUAL_CHAIR_LONGITUDINAL_POS" type="float"/>
+			<Attribute description="CHAIR_PITCH_ANGLE" highValue="" lowValue="" name="CHAIR_PITCH_ANGLE" purpose="" tid="523" tidName="TRAIT_ID_ACTUAL_CHAIR_PITCH_ANGLE" type="float"/>
+			<Attribute description="CHAIR_YAW_ANGLE" highValue="" lowValue="" name="CHAIR_YAW_ANGLE" purpose="" tid="524" tidName="TRAIT_ID_ACTUAL_CHAIR_YAW_ANGLE" type="float"/>
+			<Attribute description="CHAIR_ROLL_ANGLE" highValue="" lowValue="" name="CHAIR_ROLL_ANGLE" purpose="" tid="525" tidName="TRAIT_ID_ACTUAL_CHAIR_ROLL_ANGLE" type="float"/>
+			<Attribute description="CHAIR_LIFTUP_POS" highValue="" lowValue="" name="CHAIR_LIFTUP_POS" purpose="" tid="526" tidName="TRAIT_ID_ACTUAL_CHAIR_LIFTUP_POS" type="float"/>
+			<Attribute description="CHAIR_ROTATE_ANGLE" highValue="" lowValue="" name="CHAIR_ROTATE_ANGLE" purpose="" tid="527" tidName="TRAIT_ID_ACTUAL_CHAIR_ROTATE_ANGLE" type="float"/>
+			<Attribute description="CHAIR_VERTICAL_POS" highValue="" lowValue="" name="CHAIR_VERTICAL_POS" purpose="" tid="528" tidName="TRAIT_ID_TARGET_CHAIR_VERTICAL_POS" type="float"/>
+			<Attribute description="CHAIR_LATERAL_POS" highValue="" lowValue="" name="CHAIR_LATERAL_POS" purpose="" tid="529" tidName="TRAIT_ID_TARGET_CHAIR_LATERAL_POS" type="float"/>
+			<Attribute description="CHAIR_LONGITUDINAL_POS" highValue="" lowValue="" name="CHAIR_LONGITUDINAL_POS" purpose="" tid="530" tidName="TRAIT_ID_TARGET_CHAIR_LONGITUDINAL_POS" type="float"/>
+			<Attribute description="CHAIR_PITCH_ANGLE" highValue="" lowValue="" name="CHAIR_PITCH_ANGLE" purpose="" tid="531" tidName="TRAIT_ID_TARGET_CHAIR_PITCH_ANGLE" type="float"/>
+			<Attribute description="CHAIR_YAW_ANGLE" highValue="" lowValue="" name="CHAIR_YAW_ANGLE" purpose="" tid="532" tidName="TRAIT_ID_TARGET_CHAIR_YAW_ANGLE" type="float"/>
+			<Attribute description="CHAIR_ROLL_ANGLE" highValue="" lowValue="" name="CHAIR_ROLL_ANGLE" purpose="" tid="533" tidName="TRAIT_ID_TARGET_CHAIR_ROLL_ANGLE" type="float"/>
+			<Attribute description="CHAIR_LIFTUP_POS" highValue="" lowValue="" name="CHAIR_LIFTUP_POS" purpose="" tid="534" tidName="TRAIT_ID_TARGET_CHAIR_LIFTUP_POS" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_AUTO_MOTION_VERTICAL_MODE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_AUTO_MOTION_VERTICAL_MODE" purpose="" tid="535" tidName="TRAIT_ID_CHAIR_AUTO_MOTION_VERTICAL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_AUTO_MOTION_YAW_MODE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_AUTO_MOTION_YAW_MODE" purpose="" tid="536" tidName="TRAIT_ID_CHAIR_AUTO_MOTION_YAW_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_AUTO_MOTION_LATERNAL_MODE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_AUTO_MOTION_LATERNAL_MODE" purpose="" tid="537" tidName="TRAIT_ID_CHAIR_AUTO_MOTION_LATERNAL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_AUTO_MOTION_PITCH_MODE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_AUTO_MOTION_PITCH_MODE" purpose="" tid="538" tidName="TRAIT_ID_CHAIR_AUTO_MOTION_PITCH_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_AUTO_MOTION_LONGITUDINAL_MODE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_AUTO_MOTION_LONGITUDINAL_MODE" purpose="" tid="539" tidName="TRAIT_ID_CHAIR_AUTO_MOTION_LONGITUDINAL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_AUTO_MOTION_ROLL_MODE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_AUTO_MOTION_ROLL_MODE" purpose="" tid="540" tidName="TRAIT_ID_CHAIR_AUTO_MOTION_ROLL_MODE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_VERTICAL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_VERTICAL_MAX_LIMIT" purpose="" tid="541" tidName="TRAIT_ID_CHAIR_VERTICAL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_VERTICAL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_VERTICAL_MIN_LIMIT" purpose="" tid="542" tidName="TRAIT_ID_CHAIR_VERTICAL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_YAW_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_YAW_MAX_LIMIT" purpose="" tid="543" tidName="TRAIT_ID_CHAIR_YAW_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_YAW_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_YAW_MIN_LIMIT" purpose="" tid="544" tidName="TRAIT_ID_CHAIR_YAW_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_LATERNAL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LATERNAL_MAX_LIMIT" purpose="" tid="545" tidName="TRAIT_ID_CHAIR_LATERNAL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_LATERNAL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LATERNAL_MIN_LIMIT" purpose="" tid="546" tidName="TRAIT_ID_CHAIR_LATERNAL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_PITCH_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_PITCH_MAX_LIMIT" purpose="" tid="547" tidName="TRAIT_ID_CHAIR_PITCH_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_PITCH_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_PITCH_MIN_LIMIT" purpose="" tid="548" tidName="TRAIT_ID_CHAIR_PITCH_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_LONGITUDINAL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LONGITUDINAL_MAX_LIMIT" purpose="" tid="549" tidName="TRAIT_ID_CHAIR_LONGITUDINAL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_LONGITUDINAL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LONGITUDINAL_MIN_LIMIT" purpose="" tid="550" tidName="TRAIT_ID_CHAIR_LONGITUDINAL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_ROLL_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_ROLL_MAX_LIMIT" purpose="" tid="551" tidName="TRAIT_ID_CHAIR_ROLL_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_ROLL_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_ROLL_MIN_LIMIT" purpose="" tid="552" tidName="TRAIT_ID_CHAIR_ROLL_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_MOTION_TYPE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_MOTION_TYPE" purpose="" tid="553" tidName="TRAIT_ID_CHAIR_MOTION_TYPE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_LIFTUP_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LIFTUP_MAX_LIMIT" purpose="" tid="554" tidName="TRAIT_ID_CHAIR_LIFTUP_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_LIFTUP_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LIFTUP_MIN_LIMIT" purpose="" tid="555" tidName="TRAIT_ID_CHAIR_LIFTUP_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_ROTATE_MAX_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_ROTATE_MAX_LIMIT" purpose="" tid="556" tidName="TRAIT_ID_CHAIR_ROTATE_MAX_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_ROTATE_MIN_LIMIT" highValue="" lowValue="" name="TRAIT_ID_CHAIR_ROTATE_MIN_LIMIT" purpose="" tid="557" tidName="TRAIT_ID_CHAIR_ROTATE_MIN_LIMIT" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_LIFTUP_ACCELERATED_SPEED" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LIFTUP_ACCELERATED_SPEED" purpose="" tid="558" tidName="TRAIT_ID_TARGET_CHAIR_LIFTUP_ACCELERATED_SPEED" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_LIFTUP_SPEED" highValue="" lowValue="" name="TRAIT_ID_CHAIR_LIFTUP_SPEED" purpose="" tid="559" tidName="TRAIT_ID_TARGET_CHAIR_LIFTUP_SPEED" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_6DOF_SPEED" highValue="" lowValue="" name="TRAIT_ID_CHAIR_6DOF_SPEED" purpose="" tid="560" tidName="TRAIT_ID_TARGET_CHAIR_6DOF_SPEED" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_6DOF_ACCELERATED_SPEED" highValue="" lowValue="" name="TRAIT_ID_CHAIR_6DOF_ACCELERATED_SPEED" purpose="" tid="561" tidName="TRAIT_ID_TARGET_CHAIR_6DOF_ACCELERATED_SPEED" type="float"/>
+			<Attribute description="TRAIT_ID_CHAIR_MOTION_6DOF_REACHED_STATUS_TYPE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_MOTION_6DOF_REACHED_STATUS_TYPE" purpose="" tid="562" tidName="TRAIT_ID_CHAIR_MOTION_REACHED_6DOF_STATUS_TYPE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_MOTION_ROTATE_REACHED_STATUS_TYPE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_MOTION_ROTATE_REACHED_STATUS_TYPE" purpose="" tid="563" tidName="TRAIT_ID_CHAIR_MOTION_REACHED_ROTATE_STATUS_TYPE" type="short"/>
+			<Attribute description="TRAIT_ID_CHAIR_MOTION_LIFTUP_REACHED_STATUS_TYPE" highValue="" lowValue="" name="TRAIT_ID_CHAIR_MOTION_LIFTUP_REACHED_STATUS_TYPE" purpose="" tid="564" tidName="TRAIT_ID_CHAIR_MOTION_REACHED_LIFTUP_STATUS_TYPE" type="short"/>
+		</Group>
+		<Group name="BSS">
+			<Attribute description="estimate therapy time for this beam request" highValue="" lowValue="" name="BEAM_REQ_BEAM_ENERGY" purpose="Facility" tid="3500" tidName="TRAIT_ID_BSS_BEAM_REQ_ESTIMATE_TIME" type="double"/>
+			<Attribute description="beam angle (gantry angle or chair angle)" highValue="" lowValue="" name="BSS_BEAM_REQ_BEAM_CURRENT" purpose="Facility" tid="3501" tidName="TRAIT_ID_BSS_BEAM_REQ_BEAM_ANGLE" type="float"/>
+			<Attribute description="priority (low or high) for this beam request" highValue="" lowValue="" name="BSS_BEAM_REQ_ESTIMATE_TIME" purpose="Facility" tid="3502" tidName="TRAIT_ID_BSS_BEAM_REQ_PRIORITY" type="short"/>
+			<Attribute description="request id for beam request" highValue="" lowValue="" name="BSS_BEAM_REQ_PRIORITY" purpose="Facility" tid="3503" tidName="TRAIT_ID_BSS_BEAM_REQUEST_ID" type="long"/>
+			<Attribute description="wait time until beam ready in seconds" highValue="" lowValue="" name="BEAM_REMAINING_TIME" purpose="Facility" tid="3504" tidName="TRAIT_ID_BSS_BEAM_WAIT_TIME" type="double"/>
+			<Attribute description="state of beam operation" highValue="" lowValue="" name="BEAM_OPERATION_STATE" purpose="Facility" tid="3505" tidName="TRAIT_ID_BSS_BEAM_OPERATION_STATE" type="short"/>
+			<Attribute description="beam state after beam request is in queue" highValue="" lowValue="" name="BEAM_STATE_IN_BEAM_SCHEDULER_QUEUE" purpose="Facility" tid="3506" tidName="TRAIT_ID_BSS_BEAM_SCHEDULE_STATE" type="short"/>
+		</Group>
+		<Group name="Keypad">
+			<Attribute description="Id of function in Keypad" highValue="" lowValue="" name="KEYPAD_FUNCTION_ID" purpose="Facility" tid="0" tidName="TRAIT_ID_KEYPAD_FUNCTION_ID" type="long"/>
+			<Attribute description="Keypad function active state (active,inactive)" highValue="" lowValue="" name="KEYPAD_FUNCTION_ACTIVE_STATE" purpose="Facility" tid="1" tidName="TRAIT_ID_KEYPAD_FUNCTION_ACTIVE_STATE" type="long"/>
+			<Attribute description="Keypad function enabled state (enable,disable)" highValue="" lowValue="" name="KEYPAD_FUNCTION_ENABLE_STATE" purpose="Facility" tid="2" tidName="TRAIT_ID_KEYPAD_FUNCTION_ENABLE_STATE" type="long"/>
+			<Attribute description="If request is executed successfully(succeed/failed)" highValue="" lowValue="" name="KEYPAD_OPERATION_RESULT" purpose="Facility" tid="3" tidName="TRAIT_ID_KEYPAD_OPERATION_RESULT" type="short"/>
+			<Attribute description="The value of key switch can be OFF/PREP/TREAT" highValue="" lowValue="" name="KEYPAD_SWITCH_OPTION" purpose="Facility" tid="4" tidName="TRAIT_ID_KEYPAD_KEY_SWITCH_OPTION" type="short"/>
+			<Attribute description="enum PvsMode,  Orthogonal or CBCT, selection from Pvs, Keypad forward this information to TCS" highValue="" lowValue="" name="KEYPAD_PVS_MODE_SELECTION" purpose="Facility" tid="5" tidName="TRAIT_ID_KEYPAD_PVS_MODE_SELECTION" type="long"/>
+			<Attribute description="enum ExposureState, InExposure or NotInExposure, indication whether is exposuring now, PVS PLC will give a hardware signal to Keypad, Keypad inform TCS" highValue="" lowValue="" name="KEYPAD_PVS_EXPOSURE_STATE" purpose="Facility" tid="6" tidName="TRAIT_ID_KEYPAD_PVS_EXPOSURE_STATE" type="long"/>
+			<Attribute description="enum MotionStatus, indication the status of Motion components" highValue="" lowValue="" name="KEYPAD_MOTION_STATUS" purpose="Facility" tid="7" tidName="TRAIT_ID_KEYPAD_MOTION_STATUS" type="long"/>
+		</Group>
+		<Group name="SAF">
+			<Attribute description="Safety system message ID" highValue="" lowValue="" name="SAF_MSG_ID" purpose="" tid="8000" tidName="TRAIT_ID_SAF_MSG_ID" type="long"/>
+		</Group>
+		<Group name="Log">
+			<Attribute description="source of system log" highValue="" lowValue="" name="SOURCE" purpose="Facility" tid="11000" tidName="TRAIT_ID_LOG_SOURCE" type="string"/>
+			<Attribute description="id of source" highValue="" lowValue="" name="SOURCE_ID" purpose="Facility" tid="11001" tidName="TRAIT_ID_LOG_SOURCE_ID" type="string"/>
+			<Attribute description="id of log" highValue="" lowValue="" name="ID" purpose="Facility" tid="11002" tidName="TRAIT_ID_LOG_ID" type="string"/>
+			<Attribute description="type of log" highValue="" lowValue="" name="TYPE" purpose="Facility" tid="11003" tidName="TRAIT_ID_LOG_TYPE" type="string"/>
+			<Attribute description="high resolution time" highValue="" lowValue="" name="HR_TIME" purpose="Facility" tid="11004" tidName="TRAIT_ID_LOG_HR_TIME" type="string"/>
+			<Attribute description="date " highValue="" lowValue="" name="DATE" purpose="Facility" tid="11005" tidName="TRAIT_ID_LOG_DATE" type="string"/>
+			<Attribute description="time" highValue="" lowValue="" name="TIME" purpose="Facility" tid="11006" tidName="TRAIT_ID_LOG_TIME" type="string"/>
+			<Attribute description="process id" highValue="" lowValue="" name="PROCESS_ID" purpose="Facility" tid="11007" tidName="TRAIT_ID_LOG_PROCESS_ID" type="string"/>
+			<Attribute description="thread id" highValue="" lowValue="" name="THREAD_ID" purpose="Facility" tid="11008" tidName="TRAIT_ID_LOG_THREAD_ID" type="string"/>
+			<Attribute description="severity of log" highValue="" lowValue="" name="SEVERITY" purpose="Facility" tid="11009" tidName="TRAIT_ID_LOG_SEVERITY" type="string"/>
+			<Attribute description="source code file" highValue="" lowValue="" name="FILE" purpose="Facility" tid="11010" tidName="TRAIT_ID_LOG_FILE" type="string"/>
+			<Attribute description="source code line" highValue="" lowValue="" name="LINE" purpose="Facility" tid="11011" tidName="TRAIT_ID_LOG_LINE" type="string"/>
+			<Attribute description="the function" highValue="" lowValue="" name="FUNCTION" purpose="Facility" tid="11012" tidName="TRAIT_ID_LOG_FUNCTION" type="string"/>
+			<Attribute description="message type" highValue="" lowValue="" name="MESSAGE_TYPE" purpose="Facility" tid="11013" tidName="TRAIT_ID_LOG_MESSAGE_TYPE" type="string"/>
+			<Attribute description="message" highValue="" lowValue="" name="MESSAGE" purpose="Facility" tid="11014" tidName="TRAIT_ID_LOG_MESSAGE" type="string"/>
+			<Attribute description="begin date" highValue="" lowValue="" name="BEGIN_DATE" purpose="Facility" tid="11015" tidName="TRAIT_ID_LOG_BEGIN_DATE" type="string"/>
+			<Attribute description="end date" highValue="" lowValue="" name="END_DATE" purpose="Facility" tid="11016" tidName="TRAIT_ID_LOG_END_DATE" type="string"/>
+			<Attribute description="begin time" highValue="" lowValue="" name="BEGIN_TIME" purpose="Facility" tid="11017" tidName="TRAIT_ID_LOG_BEGIN_TIME" type="string"/>
+			<Attribute description="end time" highValue="" lowValue="" name="END_TIME" purpose="Facility" tid="11018" tidName="TRAIT_ID_LOG_END_TIME" type="string"/>
+			<Attribute description="the level of log details" highValue="" lowValue="" name="DETAIL_LEVEL" purpose="Facility" tid="11019" tidName="TRAIT_ID_LOG_DETAIL_LEVEL" type="string"/>
+		</Group>
+		<Group name="Configure">
+			<Attribute description="lanuage name" highValue="" lowValue="" name="TRAIT_ID_CFG_LANUAGE" purpose="Facility" tid="8500" tidName="TRAIT_ID_CFG_LANUAGE" type="string"/>
+			<Attribute description="lanuage  is select or not" highValue="" lowValue="" name="TRAIT_ID_CFG_LANUAGE_ENABLE" purpose="Facility" tid="8501" tidName="TRAIT_ID_CFG_LANUAGE_ENABLE" type="boolean"/>
+			<Attribute description="ois name" highValue="" lowValue="" name="TRAIT_ID_CFG_OIS" purpose="Facility" tid="8502" tidName="TRAIT_ID_CFG_OIS" type="string"/>
+			<Attribute description="ois  is select or not" highValue="" lowValue="" name="TRAIT_ID_CFG_OIS_ENABLE" purpose="Facility" tid="8503" tidName="TRAIT_ID_CFG_OIS_ENABLE" type="boolean"/>
+			<Attribute description="room name" highValue="" lowValue="" name="TRAIT_ID_CFG_ROOM" purpose="Facility" tid="8504" tidName="TRAIT_ID_CFG_ROOM" type="string"/>
+			<Attribute description="room  is select or not" highValue="" lowValue="" name="TRAIT_ID_CFG_ROOM_ENABLE" purpose="Facility" tid="8505" tidName="TRAIT_ID_CFG_ROOM_ENABLE" type="boolean"/>
+			<Attribute description="sitepolicy name" highValue="" lowValue="" name="TRAIT_ID_CFG_SITEPOLICY" purpose="Facility" tid="8506" tidName="TRAIT_ID_CFG_SITEPOLICY" type="string"/>
+			<Attribute description="sitepolicy  is select or not" highValue="" lowValue="" name="TRAIT_ID_CFG_SITEPOLICY_ENABLE" purpose="Facility" tid="8507" tidName="TRAIT_ID_CFG_SITEPOLICY_ENABLE" type="boolean"/>
+			<Attribute description="room type (gantry room or chair room)" highValue="" lowValue="" name="CFG_ROOM_TYPE" purpose="TreatmentRoom" tid="8508" tidName="TRAIT_ID_CFG_ROOM_TYPE" type="short"/>
+			<Attribute description="machine name (room name)" highValue="" lowValue="" name="CFG_MACHINE_NAME" purpose="TreatmentRoom" tid="8509" tidName="TRAIT_ID_CFG_MACHINE_NAME" type="string"/>
+			<Attribute description="language key" highValue="" lowValue="" name="TRAIT_ID_CFG_LANGUAGE_KEY" purpose="Facility" tid="8510" tidName="TRAIT_ID_CFG_LANGUAGE_KEY" type="string"/>
+			<Attribute description="language value" highValue="" lowValue="" name="TRAIT_ID_CFG_LANGUAGE_VALUE" purpose="Facility" tid="8511" tidName="TRAIT_ID_CFG_LANGUAGE_VALUE" type="string"/>
+			<Attribute description="Couch vertical loading position" highValue="" lowValue="" name="couch load vertical position" purpose="Facility" tid="8512" tidName="TRAIT_ID_CFG_LOAD_COUCH_VERTICAL_POS" type="float"/>
+			<Attribute description="Couch lateral loading position" highValue="" lowValue="" name="couch load lateral position" purpose="Facility" tid="8513" tidName="TRAIT_ID_CFG_LOAD_COUCH_LATERAL_POS" type="float"/>
+			<Attribute description="Couch longitudinal loading position" highValue="" lowValue="" name="couch load longitudinal position" purpose="Facility" tid="8514" tidName="TRAIT_ID_CFG_LOAD_COUCH_LONGITUDINAL_POS" type="float"/>
+			<Attribute description="Couch pitch loading position" highValue="" lowValue="" name="couch load pitch position" purpose="Facility" tid="8515" tidName="TRAIT_ID_CFG_LOAD_COUCH_PITCH_ANGLE" type="float"/>
+			<Attribute description="Couch yaw loading position" highValue="" lowValue="" name="couch load yaw position" purpose="Facility" tid="8516" tidName="TRAIT_ID_CFG_LOAD_COUCH_YAW_ANGLE" type="float"/>
+			<Attribute description="Couch roll loading position" highValue="" lowValue="" name="couch load roll position" purpose="Facility" tid="8517" tidName="TRAIT_ID_CFG_LOAD_COUCH_ROLL_ANGLE" type="float"/>
+			<Attribute description="The period of validity of machine QA in days. It is one of site policy. " highValue="" lowValue="" name="machine QA validity period" purpose="UserPreference" tid="8518" tidName="TRAIT_ID_CFG_SITEPOLICY_MACHINE_QA_VALIDITY_PERIOD" type="long"/>
+		</Group>
+		<Group name="PDT">
+			<Attribute description="Id of function in pendant" highValue="" lowValue="" name="PDT_FUNCTION_ID" purpose="Facility" tid="11500" tidName="TRAIT_ID_PDT_FUNCTION_ID" type="long"/>
+			<Attribute description="function active state of pendant key(actived/inactived)" highValue="" lowValue="" name="PDT_FUNCTION_ACTIVE_STATE" purpose="Facility" tid="11501" tidName="TRAIT_ID_PDT_FUNCTION_ACTIVE_STATE" type="long"/>
+			<Attribute description="Enable function of the pendant (enable/disable)" highValue="" lowValue="" name="PDT_FUNCTION_ENABLE_STATE" purpose="Facility" tid="11502" tidName="TRAIT_ID_PDT_FUNCTION_ENABLE_STATE" type="long"/>
+		</Group>
+		<Group name="Panel">
+			<Attribute description="Message Id for TCS send to panel, increasing 1 after each command send" highValue="" lowValue="" name="PANEL_MESSAGE_ID" purpose="Facility" tid="12000" tidName="TRAIT_ID_PANEL_MESSAGE_ID" type="unsigned long"/>
+			<Attribute description="Command for TCS send to panel, enum PanelCommand" highValue="" lowValue="" name="PANEL_COMMAND" purpose="Facility" tid="12001" tidName="TRAIT_ID_PANEL_COMMAND" type="long"/>
+			<Attribute description="Message Id that panel response to the specified TCS message" highValue="" lowValue="" name="PANEL_MESSAGE_ID_RESPONSE_TO" purpose="Facility" tid="12002" tidName="TRAIT_ID_PANEL_MESSAGE_ID_RESPONSE_TO" type="unsigned long"/>
+			<Attribute description="idenify wheter the command accpeted by panel or not" highValue="" lowValue="" name="PANEL_COMMAND_ACCEPT_STATUS" purpose="Facility" tid="12003" tidName="TRAIT_ID_PANEL_COMMAND_ACCEPT_STATUS" type="long"/>
+			<Attribute description="enum PanelPosition, Unknown, Retracted, FullFan, HalfFan" highValue="" lowValue="" name="PANEL_POSITION" purpose="Facility" tid="12004" tidName="TRAIT_ID_PANEL_POSITION" type="long"/>
+			<Attribute description="enum PanelMotionState, TargetNotSet, MovingToTarget, TargetNotReachedButStopped, TargetReached" highValue="" lowValue="" name="PANEL_MOTION_STATE" purpose="Facility" tid="12005" tidName="TRAIT_ID_PANEL_MOTION_STATE" type="long"/>
+		</Group>
+		<Group name="Snout">
+			<Attribute description="Message Id for TCS send to snout, increasing 1 after each command send" highValue="" lowValue="" name="SNOUT_MESSAGE_ID" purpose="Facility" tid="5500" tidName="TRAIT_ID_SNOUT_MESSAGE_ID" type="unsigned long"/>
+			<Attribute description="Command for TCS send to snout, enum SnoutCommand" highValue="" lowValue="" name="SNOUT_COMMAND" purpose="Facility" tid="5501" tidName="TRAIT_ID_SNOUT_COMMAND" type="long"/>
+			<Attribute description="Message Id that snout response to the specified TCS message" highValue="" lowValue="" name="SNOUT_MESSAGE_ID_RESPONSE_TO" purpose="Facility" tid="5502" tidName="TRAIT_ID_SNOUT_MESSAGE_ID_RESPONSE_TO" type="unsigned long"/>
+			<Attribute description="idenify wheter the command accpeted by snout or not" highValue="" lowValue="" name="SNOUT_COMMAND_ACCEPT_STATUS" purpose="Facility" tid="5503" tidName="TRAIT_ID_SNOUT_COMMAND_ACCEPT_STATUS" type="long"/>
+			<Attribute description="16bit float point value, snout target position" highValue="" lowValue="" name="SNOUT_POSITION" purpose="Facility" tid="5504" tidName="TRAIT_ID_SNOUT_TARGET_POSITION" type="float"/>
+			<Attribute description="enum SnoutMotionState, TargetNotSet, MovingToTarget, TargetNotReachedButStopped, TargetReached" highValue="" lowValue="" name="SNOUT_MOTION_STATE" purpose="Facility" tid="5505" tidName="TRAIT_ID_SNOUT_MOTION_STATE" type="long"/>
+			<Attribute description="enum SnoutTargetValidateResult, NotReachable, Reachable, Reached" highValue="" lowValue="" name="SNOUT_TARGET_VALIDATE_RESULT" purpose="Facility" tid="5506" tidName="TRAIT_ID_SNOUT_TARGET_VALIDATE_RESULT" type="long"/>
+			<Attribute description="16 bit float point value, snout actual position" highValue="" lowValue="" name="SNOUT_POSITION_CHANGED" purpose="Facility" tid="5507" tidName="TRAIT_ID_SNOUT_POSITION_CHANGED" type="float"/>
+			<Attribute description="enum SnoutReasonOfNotAccept" highValue="" lowValue="" name="SNOUT_REASON_OF_NOT_ACCEPT" purpose="Facility" tid="5508" tidName="TRAIT_ID_SNOUT_REASON_OF_NOT_ACCEPT" type="long"/>
+		</Group>
+		<Group name="LMS">
+			<Attribute description="Login request result (SUCCESS/FAIL)" highValue="" lowValue="" name="OPERATION RESULT" purpose="Facility" tid="12500" tidName="TRAIT_ID_LMS_OPERATION_RESULT" type="long"/>
+			<Attribute description="Login mode, RW or RO" highValue="" lowValue="" name="LOGIN MODE" purpose="Facility" tid="12501" tidName="TRAIT_ID_LMS_LOGIN_MODE" type="long"/>
+			<Attribute description="From which place the user is login from, TCS or SMS or ACS" highValue="" lowValue="" name="LOGIN SOURCE" purpose="Facility" tid="12502" tidName="TRAIT_ID_LMS_LOGIN_SOURCE" type="long"/>
+			<Attribute description="User login token" highValue="" lowValue="" name="LOGIN TOKEN" purpose="Facility" tid="12503" tidName="TRAIT_ID_LMS_LOGIN_TOKEN" type="string"/>
+		</Group>
+	</TraitAttributes>

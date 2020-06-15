@@ -1,0 +1,117 @@
+#ifndef __NEWRT_KEYPAD_IDL_F90E7084_6D38_11E8_AA6B_73AB1945CF3C__
+#define __NEWRT_KEYPAD_IDL_F90E7084_6D38_11E8_AA6B_73AB1945CF3C__
+
+#include "TraitCommon.idl"
+
+module NewRT
+{
+module TraitKeypad
+{
+    enum FunctionId
+    {
+        BEAM_ON,
+        PAUSE, //if BEAM_ON is enabled, the PAUSE function should be disabled.
+        //NEXT_POS,//unavailable, reserved for future
+        MOTION_ENABLE_BYPASS,//tcs define disable (TCS enable undefined?)
+        XRAY_ON,
+        STOP,//Original terminate treatment, it can also stop motion, stop xray.
+        //EMERGENCY_STOP alway enabled
+        PANEL_RETRACT,
+        GANTRY_MOTION,
+        SNOUT_MOTION,
+        PSDM //Patient support device motion
+        //indicators are removed, this is confirmed by shenfumin.
+    };
+    enum FunctionActiveState
+    {
+        INACTIVATED = 0,
+        ACTIVATED
+    };
+    enum FunctionEnableState
+    {
+        DISABLE = 0,
+        ENABLE
+    };
+    enum KeySwitchState
+    {
+        OFF,
+        PREP,
+        TREAT
+    };
+    /*for each function in FunctionEnableRequest
+    TRAIT_ID_KEYPAD_FUNCTION_ID
+    TRAIT_ID_KEYPAD_FUNCTION_ENABLE_STATE
+    */
+    typedef sequence<TraitCommon::TraitValue> FunctionEnableItem;
+    struct FunctionEnableRequest
+    {
+        sequence<FunctionEnableItem> functions;
+    };
+    const string TOPIC_KEYPAD_FUNCTION_ENABLE_REQ = "TOPIC_KEYPAD_FUNCTION_ENABLE_REQ";
+
+    /*for each item of functionActions in FunctionActiveStateReport
+    TRAIT_ID_KEYPAD_FUNCTION_ID
+    TRAIT_ID_KEYPAD_FUNCTION_ACTIVE_STATE
+    */
+    typedef sequence<TraitCommon::TraitValue> FunctionActiveStateItem;
+    struct FunctionActiveStateReport
+    {
+        sequence<FunctionActiveStateItem> activeStates;
+    };
+    const string TOPIC_KEYPAD_FUNCTION_ACTIVE_STATE_REPORT = "TOPIC_KEYPAD_FUNCTION_ACTIVE_STATE_REPORT";
+
+    /*
+    TRAIT_ID_KEYPAD_KEY_SWITCH_STATE //Keep last one history QoS policy
+    */
+    struct KeySwitchStateReport
+    {
+        TraitCommon::TraitValue state;
+    };
+    const string TOPIC_KEYPAD_KEY_SWITCH_STATE_REPORT = "TOPIC_KEYPAD_KEY_SWITCH_STATE_REPORT";
+
+    enum PvsMode
+    {
+        Orthogonal,
+        CBCT
+    };
+
+    enum ExposureState
+    {
+        InExposure,   // exposure is ongoing
+        NotInExposure // not in exposure, exposure maybe not start yet or stopped already
+    };
+
+    struct PvsInformationReport
+    {
+        TraitCommon::TraitValueList infos;
+    };
+    // Traits in Pvs Information Report
+    // TRAIT_ID_KEYPAD_PVS_MODE_SELECTION, enum PvsMode, optional, required if PvsMode has been changed from Pvs
+    // TRAIT_ID_KEYPAD_PVS_EXPOSURE_STATE, enum ExposureState, optional, required if ExposureState has been changed from Pvs
+    const string TOPIC_KEYPAD_PVS_INFO_REPORT = "TOPIC_KEYPAD_PVS_INFO_REPORT";
+
+    enum MotionStatus
+    {
+        Unknown,
+        Stopped,
+        Moving,
+        Reached
+    };
+    typedef TraitCommon::TraitValueList MotionStatusItem;
+    struct MotionStatusReport
+    {
+        sequence<MotionStatusItem> status;
+    };
+    const string TOPIC_KEYPAD_MOTION_STATUS_REPORT = "TOPIC_KEYPAD_MOTION_STATUS_REPORT";
+
+    // Keypad sends Message Report to TCS when some error happens in keypad. These messages can be regarded as interlocks.
+    struct MessageReport
+    {
+        TraitCommon::MessageIdList messages;//modify
+    };
+    const string TOPIC_KEYPAD_MESSAGE_REPORT = "TOPIC_KEYPAD_MESSAGE_REPORT";
+
+}; // end of module TraitKeypad
+}; // end of module NewRT
+
+#endif // __NEWRT_KEYPAD_IDL_F90E7084_6D38_11E8_AA6B_73AB1945CF3C__

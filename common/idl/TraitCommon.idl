@@ -1,0 +1,376 @@
+#ifndef __NEWRT_TRAIT_COMMON_IDL_
+#define __NEWRT_TRAIT_COMMON_IDL_
+
+module NewRT
+{
+module TraitCommon
+{
+	/*
+	* exceptions for entire system
+	*/
+	enum TreatmentControlProblem
+	{
+		TCS_NOFACILITY,	// no facility available
+		TCS_NOTREATMENTROOM,	// no indication of location
+		TCS_NOCONSOLE,	// no treatment console connection yet
+		TCS_NOIMAGING,	// cannot connect to imaging system
+		TCS_NOGANTRY,	// cannot connect to gantry
+		TCS_NOTABLE,	// cannot connect to patient table
+		TCS_NOCHAIR,	// cannot connect to patient chair
+		TCS_NOPROTONS,	// cannot connect to beam scheduler
+		TCS_NOPATIENT,	// no patient yet identified
+
+		TCS_NOMEMORY,	// no memory
+		TCS_NODISKSPACE,	// no disk space
+		TCS_NOPERMISSION,	// subsystem is under control of another client
+		TCS_INPROGRESS, // operation already in progress
+		TCS_NOTEXT,	// no NLS text has been matched
+		TCS_NOTFOUND,	// existing item was not found
+		TCS_BADSTATE,	// operation is invalid in current state
+		TCS_NOLOCALE,	// no such locale
+		TCS_BADTRAIT,	// unknown trait encountered
+		TCS_TRAITVALUE,	// value for trait is not acceptable
+		TCS_DUPLICATETRAIT,	// duplicate trait encountered
+		TCS_NOVISITS,	// no treatments available for patient
+		TCS_BADARG,	// improper argument used internally
+		TCS_SOFTWARE,	// unknown software error
+		TCS_NETWORK, 	// unknown network error
+		TCS_UNKNOWN
+	};
+
+	typedef unsigned short RelativeSeconds; // over 18 hours
+	typedef unsigned short RelativeMsecs;	// over 65 seconds
+	typedef unsigned long TimeSeconds;	// over 136 years from 1/1/1970
+
+	/*
+	* Native Language Support has components shown in the
+	* following example:
+	* NLSIndex: 1
+	* NLSKey: "ENTER_PAT_NAME"
+	* NLSText: "Please Enter Patient's Name: "
+	*
+	* The software expresses messages using an NLSKey, and is
+	* communicated using an NLSIndex.  All clients have a copy of the NLS
+	* Text database, which includes the Key, Match and Text fields.
+	* There is a separate database for each language, but all have a
+	* common Key and Index; only the text changes.  See below.
+	*/
+	typedef long NLSIndex;
+	typedef string NLSKey;
+	typedef string NLSText;
+
+	/*
+	* for each textual message which may be presented to the user in the
+	* system, there is a key; a key represents a concept, and is a brief
+	* phrase in English, such as "ENTER_PAT_NAME". For each supported
+	* language there is a lengthy text string, such as "Please enter the
+	* Patient's Name" (for example, in English). Both strings are
+	* programmer configurable; the lengthy string is potentially user
+	* configurable. There is also an index, which is actually communicated
+	* to the client.  When it starts up, the client requests an entire
+	* list be retrieved for a specific language. Private methods are used
+	* to display each specific message. Note that the target language can
+	* be changed at any time, and a new text list retrieved.  Each message
+	* is sent with a variable length sequence of arguments which have
+	* numeric values or references to other NLS text. Refer to the station
+	* interface.
+	*     The server side library has an abbreviated version of the
+	* message database included at compile time. A small program reads the
+	* database at that point and generates a C++ file containing a
+	* static data array with the Keys and numbers of arguments required.
+	* Normally, at run time the array is replaced with the actual message
+	* file contents; it exists in case the messages can't be retrieved,
+	* so basic messages will be available for debugging by field service.
+	*/
+	struct LocaleText
+	{
+		NLSKey ltKey;
+		NLSText ltText;
+		NLSIndex ltIndex;
+	};
+	#pragma keylist LocaleText
+	typedef sequence<LocaleText> LocaleTextList;
+
+	/*
+	* user textual messages are each assigned a severity, which also implies
+	* a disposition; a status message might be displayed in a footer of a
+	* graphical window, but an alarm message might cause a pop-up window to
+	* be displayed. An erase message is sent if the condition causing the
+	* message has been resolved and acknowleged elsewhere.
+	*/
+	enum UserTextSeverity
+	{
+		TEXT_STATUS,			// status text, not terribly important
+		TEXT_WARNING,			// something of which the user should take note
+		TEXT_ALARM,			// something which the user must acknowlege
+		TEXT_ERASE			// message to be erased, if still present and erasable
+	};
+
+	/*
+	* user text is a printf() style message mechanism for display to the
+	* end user. Instead of the printf() style format string, an NLSKey
+	* is used to identify the actual format string, in the appropriate
+	* language.  Arguments are expanded into the string based on an index.
+	*/
+	/*
+	union TraitData;
+	typedef TraitData UserTextArg;
+	typedef sequence<UserTextArg> UserTextArgList;
+	struct UserText
+	{
+	TimeSeconds when;		// when the message was sent
+	NLSIndex textIndex; 		// identifying the final message
+	UserTextArgList args;		// values to be placed within the final message
+	UserTextSeverity severity;	// how serious
+	};
+	#pragma keylist UserText
+	*/
+	/*
+	* Traits are fundamental to the system.  A trait describes a field
+	* which is communicated for any reason; the surname field of a patient
+	* record, the Y-axis position of a spot in a treatment layer, even
+	* the time of a scheduled patient visit.
+	*
+	* A Trait has an integer ID value, which is unique among all traits in
+	* the system. Each ID is used to refer to information about that
+	* trait, such as it's type (float, string, etc), a name (for example,
+	* "Family Name"), and other information.
+	*
+	* A list of values is kept separately for any given trait.  They are
+	* separate to isolate data from metadata.
+	*/
+	typedef long TraitID;
+	enum TCKind
+	{
+		TK_NULL,
+		TK_SHORT,
+		TK_LONG,
+		TK_USHORT,
+		TK_ULONG,
+		TK_FLOAT,
+		TK_DOUBLE,
+		TK_BOOLEAN,
+		TK_CHAR,
+		TK_OCTET,
+		TK_STRUCT,
+		TK_UNION,
+		TK_STRING,
+		TK_SEQUENCE,
+		TK_ARRAY,
+		TK_ALIAS,
+		TK_LONGLONG,
+		TK_ULONGLONG,
+		TK_VALUE
+	};
+
+	union TraitData switch (TCKind)
+	{
+	case TK_NULL:
+		char nullValue;
+	case TK_SHORT:
+		short svalue;
+	case TK_LONG:
+		long lvalue;
+	case TK_USHORT:
+		unsigned short usvalue;
+	case TK_ULONG:
+		unsigned long ulvalue;
+	case TK_FLOAT:
+		float fvalue;
+	case TK_DOUBLE:
+		double dvalue;
+	case TK_BOOLEAN:
+		boolean bvalue;
+	case TK_CHAR:
+		char cvalue;
+	case TK_OCTET:
+		octet ovalue;
+	case TK_STRING:
+		string strvalue;
+	case TK_LONGLONG:
+		long long llvalue;
+	case TK_ULONGLONG:
+		unsigned long long ullvalue;
+	};
+
+	typedef string RegExp;			// regular expression
+	typedef TCKind TraitType;
+
+	struct TraitValue
+	{
+		TraitID tid;
+		TraitData tval;
+	};
+	#pragma keylist TraitValue	
+	typedef sequence<TraitValue> TraitValueList;
+
+	enum TraitCategory
+	{
+		TRAIT_NUMERIC,
+		TRAIT_NLSKEY,
+		TRAIT_STRING,
+		TRAIT_CHOICE,
+		TRAIT_DATE,
+		TRAIT_BOOL,
+		TRAIT_NONE
+	};
+
+	/*
+	* the types of records maintained. Each
+	* trait belongs to one of these categories
+	*/
+	enum TraitPurpose
+	{
+		TRAIT_PERSONAL,
+		TRAIT_BIOMETRIC,
+		TRAIT_CLINICAL,
+		TRAIT_SCHEDULE,
+		TRAIT_FIELD,
+		TRAIT_SESSION,
+		TRAIT_PRESCRIPTION,
+		TRAIT_FACILITY,
+		TRAIT_TREATMENTROOM,
+		TRAIT_USERPREFERENCE,
+		TRAIT_ALL			// never stored; only for lookup using getTraitAttrList()
+	};
+
+	/*
+	* accepted range for numeric arguments; this is used
+	* for input validation of the trait value itself, but
+	* also for value retrieval, as the range of requested
+	* values.
+	*/
+	struct MatchNumeric
+	{
+		double loValue;
+		double hiValue;
+	};
+	#pragma keylist MatchNumeric	
+	/*
+	* accepted range for dates; this is used for input
+	* validation (seldom) of the trait value, but more
+	* commonly for searches of dates between these.
+	*/
+	struct MatchDate
+	{
+		string startDate;		// YYYYMMDD[HHMMSS]
+		string endDate; 		// YYYYMMDD[HHMMSS]
+	};
+	#pragma keylist MatchDate
+	/*
+	* currently only allowed to match
+	* on numeric or string values
+	*/
+	#define MAX_TRAIT_MATCH_CHOICE_SIZE	10
+	union TraitMatch switch (TraitCategory)
+	{
+	case TRAIT_NUMERIC:
+		MatchNumeric limits;
+	case TRAIT_NLSKEY:
+		string key;
+	case TRAIT_STRING:
+		RegExp pattern;
+	case TRAIT_CHOICE:
+		sequence<TraitData, MAX_TRAIT_MATCH_CHOICE_SIZE> choice; // an enumerated value for searches; unnecessary for validation
+	case TRAIT_DATE:
+		MatchDate dates;
+	case TRAIT_BOOL:
+		boolean expected;		// not for input validation; only for searches
+	};
+
+	/*
+	* match a certain existing value,
+	* or limit a new value.
+	*/
+	struct LookupMatch
+	{
+		TraitID field;
+		TraitMatch match;
+	};
+	#pragma keylist LookupMatch
+	#define MAX_LOOKUP_MATCH_LIST_SIZE	100
+	typedef sequence<LookupMatch> LookupMatchList;
+
+	/*
+	* Each trait is described by a TraitAttr,
+	* which describes everything about this trait.
+	* The value is stored separately.
+	*/
+	struct TraitAttr
+	{
+		TraitID tid;			// unique identifier
+		TraitType type; 		// type; long, short, etc.
+		NLSKey name;			// terse name of this trait; suitable for title or label
+		NLSKey description;		// verbose, suitable for help or tooltips
+		TraitMatch range;		// acceptable values
+		TraitPurpose purpose;	// purpose; what type of record this trait belongs to
+	};
+	#pragma keylist TraitAttr
+	typedef sequence<TraitAttr> TraitAttrList;
+
+	/*
+	* Message definitions 
+	*/
+	typedef long MsgID;
+	typedef string MsgText;
+	enum MsgSeverity
+	{
+		MSG_DEBUG,
+		MSG_INFO,
+		MSG_WARN,
+		MSG_ERROR,
+		MSG_CRITICAL
+	};
+	
+	enum MsgCategory
+	{
+		NA,
+		DOOR,
+		NO_BEAM,
+		MISMATCH,
+		PENDANT,
+		BUSY,
+		IMAGER,
+		MOTION_COLLISION,
+		INTERNAL_INTERLOCK,
+		ESTOP
+	};
+	
+	struct Message
+	{
+		MsgID mid;
+		MsgSeverity severity;
+		MsgText description;
+		MsgText action;
+		MsgCategory category;
+		boolean needAck;
+	};
+	#pragma keylist Message
+	typedef sequence<Message> MessageList; // for message meta data transport
+	typedef sequence<TraitValue> MessageIdList; // for message transmission among software components.
+
+	/*
+	* Software components definition
+	*/
+	enum SoftwareComponent
+	{
+		SW_COMPONENT_UNKNOWN,
+		SW_COMPONENT_TCC,
+		SW_COMPONENT_TCS,
+		SW_COMPONENT_ACC,
+		SW_COMPONENT_GNT,
+		SW_COMPONENT_COUCH,
+		SW_COMPONENT_CHR,
+		SW_COMPONENT_TKP,
+		SW_COMPONENT_OIS,
+		SW_COMPONENT_PVS,
+		SW_COMPONENT_SAF,
+		SW_COMPONENT_BSS,
+		SW_COMPONENT_SMS,
+		SW_COMPONENT_END
+	};
+
+};
+};
+
+#endif

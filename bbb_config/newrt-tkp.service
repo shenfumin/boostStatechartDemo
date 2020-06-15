@@ -1,0 +1,15 @@
+[Unit]
+Description=newrt-tkp daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/home/root/newrt/tkpApp -c /home/root/newrt/ -d
+ExecReload=/bin/kill -HUP $MAINPID
+Type=simple
+KillMode=process
+Restart=on-failure
+RestartSec=10s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,30 @@
+<?xml version="1.0" encodeing="utf-8"?>
+<dds_manager>
+    <profiles>
+	    <profile id="profile_1" value="Tkp_Library::Tkp_Profile_1" default="true" />
+    </profiles>
+    <participants>
+        <participant id="participant_1" domain="1" profile="profile_1" default="true"/>
+    </participants>
+    <publishers>
+        <publisher id="publisher_1" participant="participant_1" profile="profile_1" default="true"/>
+    </publishers>
+    <subscribers>
+        <subscriber id="subscriber_1" participant="participant_1" profile="profile_1" default="true"/>
+    </subscribers>
+    <sub_topics>
+        <topic id="TOPIC_KEYPAD_FUNCTION_ENABLE_REQ" subscriber="subscriber_1" profile="profile_1" />
+    </sub_topics>
+    <sub_topics>
+        <topic id="TOPIC_KEYPAD_MOTION_STATUS_REPORT" subscriber="subscriber_1" profile="profile_1" />
+    </sub_topics>
+    <pub_topics>
+        <topic id="TOPIC_KEYPAD_FUNCTION_ACTIVE_STATE_REPORT" publisher="publisher_1" profile="profile_1" />
+    </pub_topics>
+    <pub_topics>
+        <topic id="TOPIC_KEYPAD_MESSAGE_REPORT" publisher="publisher_1" profile="profile_1" />
+    </pub_topics>
+    <pub_topics>
+        <topic id="TOPIC_KEYPAD_PVS_INFO_REPORT" publisher="publisher_1" profile="profile_1" />
+    </pub_topics>
+</dds_manager>
